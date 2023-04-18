@@ -1,0 +1,21 @@
+$_base: 16;
+$font-family-primary: Inter, sans-serif;
+$font-family-secondary: Cardo, serif;
+
+$_fs-17: calc(17 / $_base * 1rem);
+$_fs-19: calc(19 / $_base * 1rem);
+$_fs-22: calc(22 / $_base * 1rem);
+$_fs-24: calc(24 / $_base * 1rem);
+$_fs-32: calc(32 / $_base * 1rem);
+$_fs-45: calc(45 / $_base * 1rem);
+$_fs-55: calc(55 / $_base * 1rem);
+$_fs-65: calc(65 / $_base * 1rem);
+
+$text-xxs: $_fs-17;
+$text-xs: $_fs-19;
+$text-sm: $_fs-22;
+$text-md: $_fs-24;
+$text-lg: $_fs-32;
+$text-xl: $_fs-45;
+$text-xxl: $_fs-55;
+$text-huge: $_fs-65;
