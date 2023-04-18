@@ -1,0 +1,35 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/typography";
+@use "@/styles/settings/spacing";
+
+.btn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: typography.$font-family-secondary;
+  font-weight: 700;
+
+  &--primary {
+    background-color: colors.$bg-primary;
+    color: colors.$white;
+  }
+
+  &--secondary {
+    background-color: colors.$bg-secondary;
+    color: colors.$cta-primary;
+  }
+
+  &--icon {
+    background-color: colors.$white;
+  }
+
+  &--medium {
+    padding: spacing.$xs spacing.$lg;
+  }
+
+  &--large {
+    padding: spacing.$xs spacing.$xl;
+  }
+}
