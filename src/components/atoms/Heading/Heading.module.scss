@@ -1,0 +1,18 @@
+@use "@/styles/settings/typography";
+
+.heading {
+  font-family: typography.$font-family-secondary;
+  font-weight: 700;
+
+  &--small {
+    font-size: typography.$text-md;
+  }
+
+  &--medium {
+    font-size: typography.$text-xl;
+  }
+
+  &--large {
+    font-size: typography.$text-huge;
+  }
+}
