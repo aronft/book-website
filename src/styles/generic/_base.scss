@@ -1,0 +1,8 @@
+@use "@/styles/settings/typography";
+
+:root {
+}
+
+body {
+  font-family: typography.$font-family-primary;
+}

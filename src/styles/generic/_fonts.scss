@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Inter;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter-regular-web/inter-regular.eot"),
+    url("/fonts/inter-regular-web/inter-regular.woff") format("woff"),
+    url("/fonts/inter-regular-web/inter-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/inter-medium-web/inter-500.eot"),
+    url("/fonts/inter-medium-web/inter-500.woff") format("woff"),
+    url("/fonts/inter-medium-web/inter-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Cardo;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/cardo-bold-web/cardo-700.eot"),
+    url("/fonts/cardo-bold-web/cardo-700.woff") format("woff"),
+    url("/fonts/cardo-bold-web/cardo-700.woff2") format("woff2");
+}
