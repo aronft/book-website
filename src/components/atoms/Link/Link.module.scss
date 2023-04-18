@@ -1,0 +1,26 @@
+@use "@/styles/settings/colors";
+.link {
+  text-decoration: none;
+
+  &--primary {
+    color: colors.$cta-primary;
+    &:hover {
+      color: lighten(colors.$cta-primary, 10);
+    }
+  }
+
+  &--secondary {
+    color: colors.$cta-secondary;
+    &:hover {
+      color: darken(colors.$cta-secondary, 10);
+    }
+  }
+
+  &--white {
+    color: colors.$white;
+
+    &:hover {
+      color: darken(colors.$white, 10);
+    }
+  }
+}
