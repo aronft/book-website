@@ -1,0 +1,7 @@
+@use "./colors";
+
+:export {
+  primary: colors.$cta-primary;
+  white: colors.$white;
+  secondary: colors.$cta-secondary;
+}
