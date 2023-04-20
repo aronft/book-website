@@ -1,0 +1,11 @@
+@use "@/styles/settings/sizes";
+
+@mixin media-query($size) {
+  @if map-has-key(sizes.$screen-sizes, $size) {
+    @media (min-width: map-get(sizes.$screen-sizes, $size)) {
+      @content;
+    }
+  } @else {
+    @warn "No existe el tamaño especificado en el mapa.";
+  }
+}
