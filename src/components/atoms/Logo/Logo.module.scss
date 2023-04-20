@@ -1,0 +1,13 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/spacing";
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: spacing.$tiny;
+  span {
+    font-size: 28px;
+    color: colors.$white;
+    font-weight: 700;
+  }
+}
