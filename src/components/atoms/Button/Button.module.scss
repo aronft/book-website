@@ -11,18 +11,22 @@
   font-family: typography.$font-family-secondary;
   font-weight: 700;
 
+  --bg-color: transparent;
+  --text-color: inherit;
+
   &--primary {
-    background-color: colors.$bg-primary;
-    color: colors.$white;
+    --bg-color: #{colors.$bg-primary};
+    --text-color: #{colors.$white};
   }
 
   &--secondary {
-    background-color: colors.$bg-secondary;
-    color: colors.$cta-primary;
+    --bg-color: #{colors.$bg-secondary};
+    --text-color: #{colors.$cta-primary};
   }
 
-  &--icon {
-    background-color: colors.$white;
+  &--white {
+    --bg-color: #{colors.$white};
+    --text-color: #{colors.$cta-primary};
   }
 
   &--medium {
@@ -31,5 +35,20 @@
 
   &--large {
     padding: spacing.$xs spacing.$xl;
+  }
+
+  &--icon {
+    padding: spacing.$xxs spacing.$xs;
+  }
+
+  &--fill {
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  &--outline {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--bg-color);
   }
 }
