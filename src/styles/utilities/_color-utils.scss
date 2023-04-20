@@ -1,0 +1,4 @@
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/colors";
+
+@include mixins.color(colors.$colors);

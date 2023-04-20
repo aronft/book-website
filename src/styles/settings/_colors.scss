@@ -6,6 +6,7 @@ $white: #ffffff;
 
 $cta-primary: $_blue;
 $cta-secondary: $_yellow;
+$cta-secondary-light: $_gray_alt;
 
 $text-primary: $_blue;
 $text-secondary: $_grey;
@@ -14,3 +15,10 @@ $text-secondary-light: $_gray_alt;
 
 $bg-primary: $_blue;
 $bg-secondary: $_yellow;
+
+$colors: (
+  "primary": $cta-primary,
+  "secondary": $cta-secondary,
+  "secondary-light": $text-secondary-light,
+  "white": $white,
+);
