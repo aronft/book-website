@@ -1,0 +1,24 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/typography";
+
+.badge-container {
+  position: relative;
+}
+
+.badge {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  border-radius: 100%;
+  font-size: typography.$text-tiny;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  &--secondary {
+    background-color: colors.$bg-secondary;
+    color: colors.$text-primary;
+  }
+}
