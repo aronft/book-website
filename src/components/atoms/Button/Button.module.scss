@@ -10,6 +10,7 @@
   align-items: center;
   font-family: typography.$font-family-secondary;
   font-weight: 700;
+  font-size: typography.$text-xs;
 
   --bg-color: transparent;
   --text-color: inherit;
@@ -27,6 +28,10 @@
   &--white {
     --bg-color: #{colors.$white};
     --text-color: #{colors.$cta-primary};
+  }
+
+  &--small {
+    padding: spacing.$tiny spacing.$sm;
   }
 
   &--medium {
