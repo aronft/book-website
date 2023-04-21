@@ -2,6 +2,7 @@ $_base: 16;
 $font-family-primary: Inter, sans-serif;
 $font-family-secondary: Cardo, serif;
 
+$_fs-10: calc(10 / $_base * 1rem);
 $_fs-17: calc(17 / $_base * 1rem);
 $_fs-19: calc(19 / $_base * 1rem);
 $_fs-22: calc(22 / $_base * 1rem);
@@ -10,6 +11,8 @@ $_fs-32: calc(32 / $_base * 1rem);
 $_fs-45: calc(45 / $_base * 1rem);
 $_fs-55: calc(55 / $_base * 1rem);
 $_fs-65: calc(65 / $_base * 1rem);
+
+$text-tiny: $_fs-10;
 
 $text-xxs: $_fs-17;
 $text-xs: $_fs-19;
