@@ -7,7 +7,7 @@ interface LinkProps {
   children: ReactNode;
   href: string;
 }
-export const Link = ({ href, children, color }: LinkProps) => {
+export const Link = ({ href, children, color = "primary" }: LinkProps) => {
   return (
     <a
       href={href}
