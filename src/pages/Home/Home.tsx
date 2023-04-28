@@ -4,8 +4,7 @@ import { Header } from "@/components/common/Header/Header";
 export const Home = () => {
   return (
     <>
-      <Header />
-      <Footer />
+      <h1>Home</h1>
     </>
   );
 };
