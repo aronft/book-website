@@ -1,0 +1,111 @@
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/typography";
+@use "@/styles/settings/colors";
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  column-gap: spacing.$xl;
+  justify-content: space-between;
+  padding-bottom: spacing.$xl;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 614px;
+  }
+
+  &__right {
+    max-width: 592px;
+    height: 75vh;
+  }
+
+  &__title {
+    font-size: typography.$text-huge;
+    color: colors.$white;
+    font-family: typography.$font-family-secondary;
+    line-height: 1.1;
+    margin-bottom: spacing.$sm;
+    letter-spacing: -2%;
+  }
+
+  &__description {
+    color: colors.$text-secondary-light;
+    line-height: 1.8;
+    font-size: typography.$text-xs;
+    margin-bottom: spacing.$m;
+  }
+
+  &__decoration {
+    --width-decoration: 34px;
+    display: block;
+    font-size: typography.$text-md;
+    font-style: italic;
+    color: colors.$white;
+    margin-bottom: spacing.$xxs;
+    font-family: typography.$font-family-secondary;
+    font-weight: 400;
+    position: relative;
+    padding-left: calc(var(--width-decoration) + 15px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 1px;
+      background-color: colors.$bg-secondary;
+      width: var(--width-decoration);
+      top: 50%;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: spacing.$m;
+    margin-bottom: spacing.$lg;
+  }
+
+  &__tags {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.tag {
+  display: flex;
+  column-gap: spacing.$xxs;
+  &__icon {
+    background: colors.$bg-secondary;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+  }
+
+  &__description {
+    span {
+      display: block;
+      margin-bottom: spacing.$tiny;
+    }
+  }
+}
+
+.description {
+  &__title {
+    font-size: typography.$text-md;
+    line-height: 1;
+    color: colors.$white;
+    font-family: typography.$font-family-secondary;
+  }
+
+  &__total {
+    font-size: typography.$text-xs;
+    color: colors.$text-secondary-light;
+  }
+}
+
+.hero-image {
+  height: 100%;
+}
