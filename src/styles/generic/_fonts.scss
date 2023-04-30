@@ -24,3 +24,22 @@
     url("/fonts/cardo-bold-web/cardo-700.woff") format("woff"),
     url("/fonts/cardo-bold-web/cardo-700.woff2") format("woff2");
 }
+
+@font-face {
+  font-family: Cardo;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/cardo-regular-web/cardo-400.eot"),
+    url("/fonts/cardo-regular-web/cardo-400.woff") format("woff"),
+    url("/fonts/cardo-regular-web/cardo-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Cardo;
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/cardo-italic-web/cardo-italic.eot"),
+    url("/fonts/cardo-italic-web/cardo-italic.woff") format("woff"),
+    url("/fonts/cardo-italic-web/cardo-italic.woff2") format("woff2");
+}
