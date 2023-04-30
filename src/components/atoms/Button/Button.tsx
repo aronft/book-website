@@ -7,6 +7,7 @@ export interface ButtonProps {
   size?: "small" | "medium" | "icon";
   children: ReactNode;
   type?: "fill" | "outline";
+  href?: string | undefined;
 }
 
 export const Button = ({
@@ -14,7 +15,16 @@ export const Button = ({
   size = "small",
   children,
   type = "fill",
+  href,
 }: ButtonProps) => {
+  if (href) {
+    return (
+      <a href={href} className={classNames(styles.btn, styles[`btn--link`])}>
+        {children}
+      </a>
+    );
+  }
+
   return (
     <button
       className={classNames(
