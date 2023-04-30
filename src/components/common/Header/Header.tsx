@@ -8,7 +8,7 @@ import { Menu } from "../Menu/Menu";
 import { Button } from "@/components/atoms/Button";
 import { IoCartOutline } from "react-icons/io5";
 import stylesColor from "@/styles/settings/colors-map.module.scss";
-import { Badge } from "@/components/Badge/Badge";
+import { Badge } from "@/components/atoms/Badge/Badge";
 
 export const Header = () => {
   return (
