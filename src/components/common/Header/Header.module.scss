@@ -6,8 +6,7 @@
   top: 35px;
   left: 0;
   right: 0;
-  max-height: 50px;
-  background-color: red;
+  max-height: spacing.$headr-size;
 
   > div {
     display: flex;
