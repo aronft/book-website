@@ -1,0 +1,8 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/spacing";
+
+.hero {
+  padding-top: spacing.$headr-size + spacing.$m + spacing.$xl;
+  background-color: colors.$bg-primary;
+  min-height: 500px;
+}
