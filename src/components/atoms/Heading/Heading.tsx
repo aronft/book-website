@@ -2,7 +2,7 @@ import classNames from "classnames";
 import React from "react";
 import styles from "./Heading.module.scss";
 
-interface HeadingProps {
+export interface HeadingProps {
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   size?: "small" | "medium" | "large";
   color?: "primary" | "secondary" | "white";
