@@ -1,0 +1,114 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/typography";
+@use "@/styles/settings/spacing";
+// @use '@/styles/settins';
+
+.author-section {
+  background-color: #f4f8ff;
+  padding-block: spacing.$section-inside-space;
+
+  &__line {
+    width: 55px;
+    border-bottom: 3px solid colors.$cta-secondary;
+    margin-block: spacing.$xs;
+  }
+
+  &__description {
+    color: colors.$text-thertiary;
+    line-height: 1.8;
+    letter-spacing: -0.01em;
+    font-size: typography.$text-xs;
+    margin-bottom: spacing.$m;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: spacing.$m;
+  }
+}
+
+.stat {
+  &__count {
+    font-size: typography.$text-xxl;
+    color: colors.$text-primary;
+    font-weight: bold;
+    font-family: typography.$font-family-secondary;
+  }
+
+  &__description {
+    font-size: typography.$text-xxs;
+    color: colors.$text-thertiary;
+    line-height: 1.7;
+  }
+}
+
+.separator {
+  min-height: 90%;
+  border-left: 1px solid colors.$cta-secondary;
+}
+
+.contact {
+  background-color: colors.$bg-primary;
+  padding: spacing.$xs;
+  display: flex;
+  align-items: center;
+  column-gap: 37px;
+
+  &__qr-container {
+    flex-basis: 130px;
+    background-color: colors.$white;
+    padding: spacing.$xxs;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    color: colors.$text-secondary-light;
+    font-size: typography.$text-xs;
+
+    span:nth-child(1) {
+      font-size: typography.$text-sm;
+      font-family: typography.$font-family-secondary;
+      font-weight: bold;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  column-gap: 182px;
+  align-items: center;
+
+  &__left {
+    flex-basis: 590px;
+    min-height: 690px;
+  }
+
+  &__right {
+    flex-basis: 570px;
+  }
+}
+
+.image-container {
+  position: relative;
+  &::after {
+    content: "";
+    border: 12px solid colors.$bg-secondary;
+    width: 100%;
+    height: 650px;
+    top: 40px;
+    left: 40px;
+    position: absolute;
+  }
+
+  img {
+    position: relative;
+    z-index: 1;
+    width: 550px;
+    height: 650px;
+    object-fit: cover;
+    box-shadow: 0px 35px 25px colors.$shadow-dark;
+  }
+}

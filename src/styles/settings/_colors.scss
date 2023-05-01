@@ -12,9 +12,12 @@ $text-primary: $_blue;
 $text-secondary: $_grey;
 $text-thertiary: $white;
 $text-secondary-light: $_gray_alt;
+$text-thertiary: #969aa0;
 
 $bg-primary: $_blue;
 $bg-secondary: $_yellow;
+
+$shadow-dark: rgba(4, 11, 20, 0.15);
 
 $colors: (
   "primary": $cta-primary,
