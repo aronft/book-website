@@ -4,7 +4,7 @@ import styles from "./Separator.module.scss";
 interface SeparatorProps {
   size?: "small" | "medium" | "large";
   orientation?: "vertical" | "horizontal";
-  color?: "secondary";
+  color?: "primary" | "secondary";
 }
 
 export const Separator = ({
