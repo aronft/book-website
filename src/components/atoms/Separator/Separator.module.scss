@@ -1,0 +1,25 @@
+@use "@/styles/settings/colors";
+
+.separator {
+  --height: 0;
+  --width: 0;
+
+  &--medium {
+    --height: 3px;
+    --width: 55px;
+  }
+
+  &--vertical {
+    width: var(--height);
+    height: var(--width);
+  }
+
+  &--horizontal {
+    width: var(--width);
+    height: var(--height);
+  }
+
+  &--secondary {
+    background-color: colors.$bg-secondary;
+  }
+}
