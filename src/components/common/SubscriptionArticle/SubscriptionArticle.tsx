@@ -1,8 +1,8 @@
-import { Container } from "@/components/objects/Container/Container";
+import { Container } from "@/components/ui/objects/Container/Container";
 import styles from "./SubscriptionArticle.module.scss";
-import { Heading, HeadingProps } from "@/components/atoms/Heading/Heading";
-import { Separator } from "@/components/atoms/Separator/Separator";
-import { Button } from "@/components/atoms/Button";
+import { Heading, HeadingProps } from "@/components/ui/atoms/Heading/Heading";
+import { Separator } from "@/components/ui/atoms/Separator/Separator";
+import { Button } from "@/components/ui/atoms/Button";
 
 interface SubscriptionArticleProps extends Pick<HeadingProps, "level"> {}
 

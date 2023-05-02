@@ -1,7 +1,7 @@
-import { Container } from "@/components/objects/Container/Container";
+import { Container } from "@/components/ui/objects/Container/Container";
 import styles from "./AboutAuthorSection.module.scss";
 import classNames from "classnames";
-import { Heading } from "@/components/atoms/Heading/Heading";
+import { Heading } from "@/components/ui/atoms/Heading/Heading";
 import AuthorImage from "@/assets/images/author-photo.png";
 import qrImage from "@/assets/images/qr-code.png";
 

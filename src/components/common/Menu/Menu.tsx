@@ -1,5 +1,5 @@
-import { Link } from "@/components/atoms/Link/Link";
-import { UiList } from "@/components/objects/UiList/UiList";
+import { Link } from "@/components/ui/atoms/Link/Link";
+import { UiList } from "@/components/ui/objects/UiList/UiList";
 import React from "react";
 
 export const Menu = () => {

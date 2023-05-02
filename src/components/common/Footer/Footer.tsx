@@ -1,9 +1,9 @@
-import { Heading } from "../../atoms/Heading/Heading";
-import { Link } from "../../atoms/Link/Link";
-import { Logo } from "../../atoms/Logo/Logo";
-import { SocialIcons } from "../../molecules/SocialIcons/SocialIcons";
-import { Container } from "../../objects/Container/Container";
-import { UiList } from "../../objects/UiList/UiList";
+import { Heading } from "../../ui/atoms/Heading/Heading";
+import { Link } from "../../ui/atoms/Link/Link";
+import { Logo } from "../../ui/atoms/Logo/Logo";
+import { SocialIcons } from "../../ui/molecules/SocialIcons/SocialIcons";
+import { Container } from "../../ui/objects/Container/Container";
+import { UiList } from "../../ui/objects/UiList/UiList";
 import styles from "./Footer.module.scss";
 import done from "@/assets/images/done.svg";
 import stylesColors from "@/styles/settings/colors-map.module.scss";

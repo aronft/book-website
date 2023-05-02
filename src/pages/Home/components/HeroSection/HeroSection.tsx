@@ -1,7 +1,6 @@
-import { Button } from "@/components/atoms/Button";
-import { Link } from "@/components/atoms/Link/Link";
-import { Container } from "@/components/objects/Container/Container";
-import { Hero } from "@/components/objects/Hero/Hero";
+import { Button } from "@/components/ui/atoms/Button";
+import { Container } from "@/components/ui/objects/Container/Container";
+import { Hero } from "@/components/ui/objects/Hero/Hero";
 import bookImage from "@/assets/images/the_dark_light_book.png";
 import styles from "./HeroSection.module.scss";
 

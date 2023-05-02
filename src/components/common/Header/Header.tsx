@@ -1,14 +1,14 @@
 import React from "react";
-import { Container } from "@/components/objects/Container/Container";
-import { SocialIcons } from "@/components/molecules/SocialIcons/SocialIcons";
+import { Container } from "@/components/ui/objects/Container/Container";
+import { SocialIcons } from "@/components/ui/molecules/SocialIcons/SocialIcons";
 import stylesColors from "@/styles/settings/colors-map.module.scss";
 import styles from "./Header.module.scss";
-import { Logo } from "@/components/atoms/Logo/Logo";
+import { Logo } from "@/components/ui/atoms/Logo/Logo";
 import { Menu } from "../Menu/Menu";
-import { Button } from "@/components/atoms/Button";
+import { Button } from "@/components/ui/atoms/Button";
 import { IoCartOutline } from "react-icons/io5";
 import stylesColor from "@/styles/settings/colors-map.module.scss";
-import { Badge } from "@/components/atoms/Badge/Badge";
+import { Badge } from "@/components/ui/atoms/Badge/Badge";
 
 export const Header = () => {
   return (

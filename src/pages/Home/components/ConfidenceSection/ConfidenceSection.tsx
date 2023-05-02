@@ -1,6 +1,6 @@
-import { Heading } from "@/components/atoms/Heading/Heading";
-import { Separator } from "@/components/atoms/Separator/Separator";
-import { Container } from "@/components/objects/Container/Container";
+import { Heading } from "@/components/ui/atoms/Heading/Heading";
+import { Separator } from "@/components/ui/atoms/Separator/Separator";
+import { Container } from "@/components/ui/objects/Container/Container";
 import styles from "./ConfidenceSection.module.scss";
 import amazenLogo from "@/assets/images/amazen.png";
 import meganBooksLogo from "@/assets/images/megan-books.png";
