@@ -2,6 +2,7 @@ $_blue: #1b3764;
 $_yellow: #ffca42;
 $_grey: #f6f8fc;
 $_gray_alt: #b4c7e7;
+$_blue-light: #f4f8ff;
 $white: #ffffff;
 
 $cta-primary: $_blue;
@@ -14,6 +15,7 @@ $text-secondary-light: $_gray_alt;
 $text-thertiary: #969aa0;
 
 $bg-primary: $_blue;
+$bg-primary-light: $_blue-light;
 $bg-secondary: $_yellow;
 
 $shadow-dark: rgba(4, 11, 20, 0.15);
