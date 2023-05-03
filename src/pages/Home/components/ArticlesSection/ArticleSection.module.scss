@@ -1,0 +1,25 @@
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/colors";
+
+.article {
+  padding-block: spacing.$section-inside-space;
+  background-color: colors.$bg-primary-light;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: spacing.$xs;
+    margin-bottom: spacing.$lg;
+  }
+
+  &__articles {
+    display: flex;
+    gap: spacing.$m;
+    justify-content: space-between;
+
+    > * {
+      flex-basis: calc(100% / 3);
+    }
+  }
+}
