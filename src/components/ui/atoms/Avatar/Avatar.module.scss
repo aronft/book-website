@@ -1,0 +1,12 @@
+.avatar {
+  --size: 0;
+
+  &--small {
+    --size: 85px;
+  }
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 100%;
+  overflow: hidden;
+}
