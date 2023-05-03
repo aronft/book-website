@@ -1,0 +1,38 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/typography";
+@use "@/styles/settings/spacing";
+
+.testimonial {
+  background-color: colors.$bg-primary;
+  padding: 31px;
+  color: colors.$text-secondary-light;
+  font-size: typography.$text-xs;
+
+  &__title {
+    color: colors.$white;
+    font-family: typography.$font-family-secondary;
+    font-weight: bold;
+    font-size: typography.$text-sm;
+    margin-bottom: spacing.$tiny;
+    line-height: 1.2;
+  }
+
+  &__description {
+    line-height: 1.8;
+  }
+}
+
+.user {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  margin-bottom: spacing.$xs;
+
+  &__name {
+    color: colors.$white;
+    font-family: typography.$font-family-secondary;
+    font-weight: bold;
+    font-size: typography.$text-md;
+    margin-bottom: spacing.$tiny;
+  }
+}
