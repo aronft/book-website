@@ -19,7 +19,10 @@ export const Button = ({
 }: ButtonProps) => {
   if (href) {
     return (
-      <a href={href} className={classNames(styles.btn, styles[`btn--link`])}>
+      <a
+        href={href}
+        className={classNames(styles.btn, styles[`btn--link`], styles[`btn--${color}`])}
+      >
         {children}
       </a>
     );

@@ -59,7 +59,7 @@
 
   &--link {
     text-decoration: none;
-    color: colors.$white;
+    color: var(--bg-color);
     font-family: typography.$font-family-secondary;
     line-height: 1.25;
     letter-spacing: 0.02em;
@@ -71,7 +71,7 @@
       bottom: 0;
       margin-bottom: -3px;
       width: calc(100% + 7px);
-      border-bottom: 1px solid colors.$white;
+      border-bottom: 1px solid var(--bg-color);
     }
   }
 }
