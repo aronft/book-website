@@ -3,10 +3,10 @@ import styles from "./Rating.module.scss";
 interface RatingProps {
   totalRating: number;
   actualRating: number;
+  withDescription?: boolean;
 }
 // {id: 0, value: 0}
-export const Rating = ({ totalRating, actualRating }: RatingProps) => {
-  const decimalLastPart = actualRating % 1;
+export const Rating = ({ totalRating, actualRating, withDescription = false }: RatingProps) => {
   let ratings = Array.from({ length: totalRating }, () => ({ value: 0 }));
 
   ratings = ratings.map((rating, index) => {
@@ -33,6 +33,9 @@ export const Rating = ({ totalRating, actualRating }: RatingProps) => {
           <span className={styles.item__bg} style={{ width: `calc(${item.value} * 100%)` }}></span>
         </span>
       ))}
+      {withDescription && (
+        <span className={styles.rating__description}>({`${actualRating}/${totalRating}`})</span>
+      )}
     </div>
   );
 };

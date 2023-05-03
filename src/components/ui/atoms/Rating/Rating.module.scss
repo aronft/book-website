@@ -1,8 +1,14 @@
 @use "@/styles/settings/colors";
+@use "@/styles/settings/typography";
 
 .rating {
   display: flex;
   gap: 5px;
+  align-items: center;
+  color: colors.$text-primary;
+  font-size: typography.$text-sm;
+  font-family: typography.$font-family-secondary;
+  font-weight: bold;
 
   &__item {
     border-radius: 100%;
@@ -11,6 +17,10 @@
     position: relative;
     border: 1px solid colors.$bg-secondary;
     overflow: hidden;
+  }
+
+  &__description {
+    margin-left: 5px;
   }
 }
 
