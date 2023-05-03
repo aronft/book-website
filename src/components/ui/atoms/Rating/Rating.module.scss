@@ -1,0 +1,26 @@
+@use "@/styles/settings/colors";
+
+.rating {
+  display: flex;
+  gap: 5px;
+
+  &__item {
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    border: 1px solid colors.$bg-secondary;
+    overflow: hidden;
+  }
+}
+
+.item {
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: colors.$bg-secondary;
+    width: 0;
+    height: 100%;
+  }
+}
