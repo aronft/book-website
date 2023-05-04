@@ -4,7 +4,7 @@ import * as classNames from "classnames";
 
 export interface ButtonProps {
   color?: "primary" | "secondary" | "white";
-  size?: "small" | "medium" | "icon";
+  size?: "small" | "medium" | "large" | "icon";
   children: ReactNode;
   type?: "fill" | "outline";
   href?: string | undefined;
