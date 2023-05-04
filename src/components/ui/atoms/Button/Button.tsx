@@ -7,6 +7,7 @@ export interface ButtonProps {
   size?: "small" | "medium" | "large" | "icon";
   children: ReactNode;
   type?: "fill" | "outline";
+  colorText?: "white";
   href?: string | undefined;
 }
 
@@ -16,6 +17,7 @@ export const Button = ({
   children,
   type = "fill",
   href,
+  colorText = "white",
 }: ButtonProps) => {
   if (href) {
     return (
@@ -34,7 +36,8 @@ export const Button = ({
         styles.btn,
         styles[`btn--${color}`],
         styles[`btn--${size}`],
-        styles[`btn--${type}`]
+        styles[`btn--${type}`],
+        styles[`text--${colorText}`]
       )}
     >
       {children}

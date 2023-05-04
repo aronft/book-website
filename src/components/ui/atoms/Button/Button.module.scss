@@ -75,3 +75,11 @@
     }
   }
 }
+
+.text {
+  --text-color: transparent;
+
+  &--white {
+    --text-color: colors.$white;
+  }
+}
