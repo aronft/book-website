@@ -6,6 +6,7 @@ import { ArticlesSection } from "./components/ArticlesSection/ArticlesSection";
 import { TestimonialSection } from "./components/TestimonialSection/TestimonialSection";
 import { EducationalGoalsSection } from "./components/EducationalGoalsSection/EducationalGoalsSection";
 import { ChapterOverviewSection } from "./components/ChapterOverviewSection/ChapterOverviewSection";
+import { GetBookSection } from "./components/GetBookSection/GetBookSection";
 
 export const Home = () => {
   return (
@@ -13,6 +14,7 @@ export const Home = () => {
       <HeroSection />
       <AboutAuthorSection />
       <ConfidenceSection />
+      <GetBookSection />
       <EducationalGoalsSection />
       <ChapterOverviewSection />
       <TestimonialSection />
