@@ -1,0 +1,41 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/typography";
+@use "@/styles/settings/spacing";
+
+.chapter-overview {
+  padding-block: spacing.$section-inside-space;
+  background-color: colors.$bg-primary-light;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: spacing.$lg;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacing.$m;
+    margin-bottom: spacing.$sm;
+
+    > * {
+      width: calc(100% / 2 - spacing.$m);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: spacing.$sm;
+  }
+}
+.footer__description {
+  text-align: center;
+  color: colors.$text-thertiary;
+  line-height: 1.7;
+  a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
