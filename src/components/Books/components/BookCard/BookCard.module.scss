@@ -1,0 +1,87 @@
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/colors";
+@use "@/styles/settings/typography";
+
+$coulmn-gap: 13px;
+
+.book-card {
+  display: flex;
+  column-gap: spacing.$xs;
+  gap: spacing.$m;
+
+  &--vertical {
+    flex-direction: column;
+  }
+
+  &--horizontal {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description {
+    font-size: typography.$text-xs;
+    color: colors.$text-thertiary;
+    margin-bottom: spacing.$xs;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: spacing.$tiny;
+  }
+
+  &__price {
+    font-weight: bold;
+    color: colors.$text-secondary;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__type {
+    display: flex;
+    align-items: center;
+    column-gap: $coulmn-gap;
+  }
+
+  &__details,
+  &__type {
+    margin-bottom: spacing.$xs;
+  }
+}
+
+@mixin subText {
+  color: colors.$text-primary;
+  font-size: typography.$text-md;
+  font-weight: bold;
+  font-family: typography.$font-family-secondary;
+  text-transform: capitalize;
+}
+
+.detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: $coulmn-gap;
+  &__name {
+    @include subText;
+  }
+
+  &__content {
+    padding-left: calc(16px + $coulmn-gap);
+    width: 100%;
+    color: colors.$text-thertiary;
+  }
+}
+
+.type__title {
+  @include subText;
+}
