@@ -4,6 +4,7 @@ import { ConfidenceSection } from "./components/ConfidenceSection/ConfidenceSect
 import SubscriptionArticle from "@/components/common/SubscriptionArticle/SubscriptionArticle";
 import { ArticlesSection } from "./components/ArticlesSection/ArticlesSection";
 import { TestimonialSection } from "./components/TestimonialSection/TestimonialSection";
+import { EducationalGoalsSection } from "./components/EducationalGoalsSection/EducationalGoalsSection";
 
 export const Home = () => {
   return (
@@ -11,6 +12,7 @@ export const Home = () => {
       <HeroSection />
       <AboutAuthorSection />
       <ConfidenceSection />
+      <EducationalGoalsSection />
       <TestimonialSection />
       <ArticlesSection />
       <SubscriptionArticle level="h2" />

@@ -1,0 +1,87 @@
+@use "@/styles/settings/typography";
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/colors";
+
+.education {
+  padding-block: spacing.$section-inside-space;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: spacing.$lg;
+
+    > *:nth-child(1) {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  &__goals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacing.$sm;
+    > * {
+      width: calc(100% / 2 - spacing.$sm);
+    }
+  }
+}
+
+.content {
+  &__left {
+    max-width: 600px;
+    padding-block: spacing.$sm;
+  }
+  &__right {
+    max-width: 590px;
+  }
+}
+
+.image-container {
+  height: 100%;
+  position: relative;
+  --size-border: 40px;
+  img {
+    position: relative;
+    object-fit: cover;
+    width: calc(100% - var(--size-border));
+    height: 100%;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    border: 12px solid colors.$bg-secondary;
+    position: absolute;
+    width: calc(100% - var(--size-border));
+    height: calc(100% - var(--size-border));
+    left: var(--size-border);
+    top: var(--size-border);
+  }
+  padding-bottom: var(--size-border);
+}
+
+.goal {
+  background-color: colors.$bg-primary-light;
+  padding: spacing.$m spacing.$sm;
+  font-size: typography.$text-md;
+  font-family: typography.$font-family-secondary;
+  font-weight: bold;
+  color: colors.$text-primary;
+  letter-spacing: -0.01em;
+  &__number {
+    width: 50px;
+    height: 50px;
+    padding: spacing.$tiny;
+    background-color: colors.$bg-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    line-height: 1.2;
+    margin-bottom: spacing.$sm;
+  }
+
+  &__description {
+    line-height: 1.4;
+  }
+}
