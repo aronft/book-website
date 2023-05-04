@@ -1,0 +1,20 @@
+.section-title {
+  --horizontal-align: initial;
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+
+  &--left {
+    --horizontal-align: flex-start;
+  }
+
+  &--right {
+    --horizontal-align: flex-end;
+  }
+
+  &--middle {
+    --horizontal-align: center;
+  }
+
+  align-items: var(--horizontal-align);
+}
