@@ -1,0 +1,17 @@
+@use "@/styles/settings/colors";
+
+.circle {
+  --size: 16px;
+  width: var(--size);
+  height: var(--size);
+  background-color: colors.$bg-secondary;
+  border-radius: 100%;
+
+  &--primary {
+    background-color: colors.$bg-primary;
+  }
+
+  &--secondary {
+    background-color: colors.$bg-secondary;
+  }
+}
