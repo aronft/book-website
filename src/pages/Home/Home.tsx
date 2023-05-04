@@ -7,11 +7,13 @@ import { TestimonialSection } from "./components/TestimonialSection/TestimonialS
 import { EducationalGoalsSection } from "./components/EducationalGoalsSection/EducationalGoalsSection";
 import { ChapterOverviewSection } from "./components/ChapterOverviewSection/ChapterOverviewSection";
 import { GetBookSection } from "./components/GetBookSection/GetBookSection";
+import { AuthorBooksSection } from "@/components/Books/components/AuthorBooksSection/AuthorBooksSection";
 
 export const Home = () => {
   return (
     <>
       <HeroSection />
+      <AuthorBooksSection />
       <AboutAuthorSection />
       <ConfidenceSection />
       <GetBookSection />
