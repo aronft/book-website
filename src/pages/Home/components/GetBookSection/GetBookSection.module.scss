@@ -1,0 +1,32 @@
+@use "@/styles/settings/typography";
+@use "@/styles/settings/colors";
+@use "@/styles/settings/spacing";
+
+.getbook-section {
+  padding-block: spacing.$sm;
+  background-color: colors.$bg-primary;
+}
+
+.content {
+  color: colors.$text-secondary-light;
+  display: flex;
+  align-items: center;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: spacing.$xs;
+  }
+
+  &__right {
+    max-width: 640px;
+    img {
+      margin-left: 34px;
+    }
+  }
+
+  &__description {
+    margin-bottom: spacing.$tiny;
+  }
+}
