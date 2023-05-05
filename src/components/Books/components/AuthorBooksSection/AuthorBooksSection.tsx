@@ -5,8 +5,13 @@ import { BookCard } from "../BookCard/BookCard";
 import styles from "./AuthorBooksSection.module.scss";
 import bookAtomicImage from "@/assets/images/books/book-atomic.png";
 import bookTheDark from "@/assets/images/books/book-the-dark.png";
+import colerStyles from "@/styles/settings/colors-map.module.scss";
 
-export const AuthorBooksSection = () => {
+interface AuthorBooksSectionProps {
+  color?: string;
+}
+
+export const AuthorBooksSection = ({ color = colerStyles.white }: AuthorBooksSectionProps) => {
   const books: Book[] = [
     {
       title: "Atomic One’s",
@@ -31,7 +36,7 @@ export const AuthorBooksSection = () => {
   ];
 
   return (
-    <section className={styles["author-books"]}>
+    <section className={styles["author-books"]} style={{ backgroundColor: color }}>
       <Container className={styles["author-books__content"]}>
         <SectionTitle color="primary" aligment="middle" separator>
           Author’s Book Includes

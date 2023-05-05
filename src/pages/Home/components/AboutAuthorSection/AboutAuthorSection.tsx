@@ -11,10 +11,7 @@ export const AboutAuthorSection = () => {
       <Container className={styles["content"]}>
         <div className={styles["content__left"]}>
           <div className={styles["image-container"]}>
-            <img
-              src={AuthorImage}
-              alt="Author working in laptop with a coffee"
-            />
+            <img src={AuthorImage} alt="Author working in laptop with a coffee" />
           </div>
         </div>
         <div className={styles["content__right"]}>
@@ -23,10 +20,9 @@ export const AboutAuthorSection = () => {
           </Heading>
           <div className={styles["author-section__line"]}></div>
           <p className={styles["author-section__description"]}>
-            All the Lorem Ipsum generators on the Internet tend to repeated
-            predefined chunks as necessary, making this the first true value
-            generator on the Internet. It uses a dictionary of over 200 Latin
-            words, combined with a handful.
+            All the Lorem Ipsum generators on the Internet tend to repeated predefined chunks as
+            necessary, making this the first true value generator on the Internet. It uses a
+            dictionary of over 200 Latin words, combined with a handful.
           </p>
           <div className={styles["author-section__stats"]}>
             <div className={styles.stat}>
@@ -49,20 +45,11 @@ export const AboutAuthorSection = () => {
               <img src={qrImage} alt="qr code about author information" />
             </div>
             <div className={styles["contact__info"]}>
-              <span
-                className={classNames(
-                  styles.contact__descripction,
-                  "text--secondary"
-                )}
-              >
+              <span className={classNames(styles.contact__descripction, "text--secondary")}>
                 John Abraham , Ph.d
               </span>
-              <span className={styles.contact__descripction}>
-                Mail : johnabraham@gmail.com
-              </span>
-              <span className={styles.contact__descripction}>
-                Phone : (+2) 123 545 9000
-              </span>
+              <span className={styles.contact__descripction}>Mail : johnabraham@gmail.com</span>
+              <span className={styles.contact__descripction}>Phone : (+2) 123 545 9000</span>
             </div>
           </div>
         </div>
