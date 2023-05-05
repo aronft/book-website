@@ -14,10 +14,10 @@ export const Menu = () => {
         <Link href="/about" color="white">
           About
         </Link>
-        <Link href="#" color="white">
+        <Link href="/services" color="white">
           Services
         </Link>
-        <Link href="#" color="white">
+        <Link href="/contact-us" color="white">
           Contact
         </Link>
       </UiList>

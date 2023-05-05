@@ -1,9 +1,9 @@
 import { HeroInfo } from "@/components/common/HeroInfo/HeroInfo";
 
-export const NoMatch = () => {
+export const Store = () => {
   return (
     <>
-      <HeroInfo title="Page Error">
+      <HeroInfo title="My Store">
         There are many variations of passages of Lorem Ipsum available, have suffered alteration in
         some form.
       </HeroInfo>
