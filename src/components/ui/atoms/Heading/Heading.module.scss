@@ -17,7 +17,11 @@
     font-size: typography.$text-lg;
   }
 
-  &--large {
+  &--extra-large {
+    font-size: typography.$text-xxl;
+  }
+
+  &--huge {
     font-size: typography.$text-huge;
   }
 

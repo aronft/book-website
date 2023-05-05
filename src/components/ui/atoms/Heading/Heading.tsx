@@ -4,7 +4,7 @@ import styles from "./Heading.module.scss";
 
 export interface HeadingProps {
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-  size?: "small" | "medium" | "semi-large" | "large";
+  size?: "small" | "medium" | "semi-large" | "extra-large" | "huge";
   color?: "primary" | "secondary" | "white";
   children: React.ReactNode;
 }
