@@ -5,8 +5,6 @@ import bookImage from "@/assets/images/the_dark_light_book.png";
 import styles from "./HeroSection.module.scss";
 
 export const HeroSection = () => {
-  console.log(styles);
-
   return (
     <Hero tag="section">
       <Container className={styles["hero-section"]}>
