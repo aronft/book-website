@@ -1,0 +1,42 @@
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/typography";
+@use "@/styles/settings/colors";
+
+.no-match {
+  position: relative;
+  // min-height: 1200px;
+  padding-block: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__bg {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    max-width: 589px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: spacing.$xxs;
+  }
+
+  &__description {
+    margin-bottom: spacing.$xs;
+    font-size: typography.$text-xs;
+    line-height: 1.8;
+    color: colors.$text-thertiary;
+    letter-spacing: -0.01em;
+  }
+
+  &__vector {
+    margin-bottom: spacing.$sm;
+  }
+}
