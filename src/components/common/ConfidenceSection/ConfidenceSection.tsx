@@ -6,10 +6,24 @@ import amazenLogo from "@/assets/images/amazen.png";
 import meganBooksLogo from "@/assets/images/megan-books.png";
 import megankLogo from "@/assets/images/megank.png";
 import urbanLibLogo from "@/assets/images/urban.png";
+import classNames from "classnames/bind";
 
-export const ConfidenceSection = () => {
+interface ConfidenceSection {
+  paddingTop?: boolean;
+  paddingBot?: boolean;
+}
+
+const ctx = classNames.bind(styles);
+
+export const ConfidenceSection = ({ paddingTop = true, paddingBot = true }: ConfidenceSection) => {
   return (
-    <section className={styles["confidence-section"]}>
+    <section
+      className={ctx(
+        styles["confidence-section"],
+        { "confidence-section--top": paddingTop },
+        { "confidence-section--bot": paddingBot }
+      )}
+    >
       <Container>
         <div className={styles["confidence-section__title"]}>
           <Heading level="h2" size="medium">
@@ -19,11 +33,7 @@ export const ConfidenceSection = () => {
         </div>
         <div className={styles["confidence-section__companies"]}>
           <div className={styles["company"]}>
-            <img
-              className={styles["company__image"]}
-              src={amazenLogo}
-              alt="Amazen company logo"
-            />
+            <img className={styles["company__image"]} src={amazenLogo} alt="Amazen company logo" />
             <Heading level="h3" size="small">
               Amazen Corp
             </Heading>
@@ -32,11 +42,7 @@ export const ConfidenceSection = () => {
             </p>
           </div>
           <div className={styles["company"]}>
-            <img
-              className={styles["company__image"]}
-              src={meganBooksLogo}
-              alt="Megan books"
-            />
+            <img className={styles["company__image"]} src={meganBooksLogo} alt="Megan books" />
             <Heading level="h3" size="small">
               Megan books
             </Heading>
@@ -58,11 +64,7 @@ export const ConfidenceSection = () => {
             </p>
           </div>
           <div className={styles["company"]}>
-            <img
-              className={styles["company__image"]}
-              src={urbanLibLogo}
-              alt="Urbal Lib logo"
-            />
+            <img className={styles["company__image"]} src={urbanLibLogo} alt="Urbal Lib logo" />
             <Heading level="h3" size="small">
               Urban lib
             </Heading>

@@ -3,8 +3,15 @@
 @use "@/styles/settings/spacing";
 
 .confidence-section {
-  padding-block: spacing.$section-inside-space;
   text-align: center;
+
+  &--top {
+    padding-top: spacing.$section-inside-space;
+  }
+
+  &--bot {
+    padding-bottom: spacing.$section-inside-space;
+  }
 
   &__title {
     display: flex;
