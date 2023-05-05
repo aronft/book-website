@@ -4,6 +4,7 @@ import { HeroInfo } from "@/components/common/HeroInfo/HeroInfo";
 import SubscriptionArticle from "@/components/common/SubscriptionArticle/SubscriptionArticle";
 import stylesColor from "@/styles/settings/colors-map.module.scss";
 import { AboutAuthorSection } from "./components/AboutAuthorSection/AboutAuthorSection";
+import { AuthorStorySection } from "./components/AuthorStorySection/AuthorStorySection";
 
 export const About = () => {
   return (
@@ -13,6 +14,7 @@ export const About = () => {
         some form.
       </HeroInfo>
       <AboutAuthorSection />
+      <AuthorStorySection />
       <AuthorBooksSection color={stylesColor.thertiary} />
       <ConfidenceSection paddingBot={false} />
       <SubscriptionArticle />
