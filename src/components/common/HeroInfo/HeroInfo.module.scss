@@ -1,0 +1,16 @@
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/colors";
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: spacing.$sm;
+  max-width: 633px;
+  &__description {
+    color: colors.$text-secondary-light;
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: -0.01em;
+  }
+}
