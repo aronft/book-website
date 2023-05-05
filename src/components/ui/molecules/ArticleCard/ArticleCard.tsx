@@ -19,7 +19,7 @@ export const ArticleCard = ({ image, title, description, date, level }: ArticleC
         <Heading level={level}>{title}</Heading>
         <p className={styles["article__description"]}>{description}</p>
         <footer className={styles["article__footer"]}>
-          <Button href="#" color="primary">
+          <Button href="/articles/1" color="primary">
             Read more
           </Button>
           <span>Author - {date}</span>

@@ -24,7 +24,6 @@ export const Rating = ({ totalRating, actualRating, withDescription = false }: R
 
     return rating;
   });
-  console.log(ratings);
 
   return (
     <div className={styles.rating}>

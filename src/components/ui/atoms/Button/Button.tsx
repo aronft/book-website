@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import styles from "./Button.module.scss";
 import * as classNames from "classnames";
+import { Link } from "react-router-dom";
 
 export interface ButtonProps {
   color?: "primary" | "secondary" | "white";
@@ -21,12 +22,12 @@ export const Button = ({
 }: ButtonProps) => {
   if (href) {
     return (
-      <a
-        href={href}
+      <Link
+        to={href}
         className={classNames(styles.btn, styles[`btn--link`], styles[`btn--${color}`])}
       >
         {children}
-      </a>
+      </Link>
     );
   }
 

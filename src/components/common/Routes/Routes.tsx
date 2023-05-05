@@ -5,7 +5,8 @@ import { About } from "@/pages/About/About";
 import { NoMatch } from "@/pages/NoMatch/NoMatch";
 import { Store } from "@/pages/Store/Store";
 import { ContactUs } from "@/pages/ContactUs/ContactUs";
-import { Articles } from "@/pages/Articles/Articles";
+import { Blog } from "@/pages/Blog/Blog";
+import { SingleBlog } from "@/pages/Blog/SingleBlog/SingleBlog";
 export const Routes = () => {
   return (
     <RoutesRouter>
@@ -13,7 +14,8 @@ export const Routes = () => {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="store" element={<Store />} />
-        <Route path="articles" element={<Articles />} />
+        <Route path="articles" element={<Blog />} />
+        <Route path="articles/:id" element={<SingleBlog />} />
         <Route path="contact-us" element={<ContactUs />} />
         <Route path="*" element={<NoMatch />} />
       </Route>

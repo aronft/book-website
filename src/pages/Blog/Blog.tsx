@@ -1,6 +1,6 @@
 import { HeroInfo } from "@/components/common/HeroInfo/HeroInfo";
 
-export const Articles = () => {
+export const Blog = () => {
   return (
     <>
       <HeroInfo title="Articles">
