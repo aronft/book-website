@@ -1,0 +1,39 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/typography";
+@use "@/styles/settings/spacing";
+
+.question {
+  --circle-size: 14px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  row-gap: spacing.$tiny;
+  padding-bottom: spacing.$sm;
+  border-bottom: 1px solid colors.$input-border;
+
+  .row {
+    display: flex;
+    align-items: center;
+    column-gap: spacing.$xxs;
+  }
+
+  .answer {
+    width: 100%;
+    padding-left: calc(var(--circle-size) + spacing.$xxs);
+    color: colors.$text-thertiary;
+    line-height: 1.8;
+  }
+}
+
+.circle {
+  width: var(--circle-size);
+  height: var(--circle-size);
+  background-color: colors.$bg-secondary;
+  border-radius: 100%;
+
+  &__active {
+    background-color: transparent;
+    border: 3px solid colors.$bg-secondary;
+  }
+}
