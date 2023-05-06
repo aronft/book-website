@@ -1,19 +1,23 @@
 @use "@/styles/settings/colors";
 @use "@/styles/settings/spacing";
 
+@mixin form-control($size-svg) {
+  width: 100%;
+  height: 100%;
+  padding: spacing.$xxs spacing.$xs;
+  padding-left: calc(spacing.$xs + $size-svg + spacing.$xxs);
+  border: 1px solid colors.$input-border;
+  color: colors.$text-thertiary;
+  &::placeholder {
+    color: colors.$text-thertiary;
+  }
+}
+
 .input-container {
   position: relative;
   --size-svg: 26px;
-  input {
-    width: 100%;
-    height: 100%;
-    padding: spacing.$xxs spacing.$xs;
-    padding-left: calc(spacing.$xs + calc(var(--size-svg)) + spacing.$xxs);
-    border: none;
-    color: colors.$text-thertiary;
-    &::placeholder {
-      color: colors.$text-thertiary;
-    }
+  .form-control {
+    @include form-control(var(--size-svg));
   }
 
   svg {

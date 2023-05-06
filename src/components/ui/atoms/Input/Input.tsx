@@ -9,7 +9,7 @@ export const Input = ({ children, placeHolder, type }: PropsWithChildren<InputPr
   return (
     <div className={styles["input-container"]}>
       {children}
-      <input type={type} placeholder={placeHolder} />
+      <input className={styles["form-control"]} type={type} placeholder={placeHolder} />
     </div>
   );
 };
