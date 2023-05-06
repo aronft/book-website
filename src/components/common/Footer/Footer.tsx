@@ -14,11 +14,7 @@ export const Footer = () => {
       <Container>
         <div className={styles["footer__section--left"]}>
           <Logo />
-          <SocialIcons
-            type="outline"
-            color="secondary"
-            iconColor={stylesColors.white}
-          />
+          <SocialIcons type="outline" color="secondary" iconColor={stylesColors.white} />
         </div>
         <div className={styles["footer__section"]}>
           <Heading level="h3" size="small" color="white">
@@ -64,7 +60,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="#">Blog</Link>
+              <Link href="/articles">Blog</Link>
             </div>
             <div className={styles["footer__group"]}>
               <div className={styles["group__icons"]}>
@@ -72,7 +68,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="#">Contact Us</Link>
+              <Link href="/contact-us">Contact Us</Link>
             </div>
           </UiList>
         </div>
@@ -105,7 +101,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="#">404 not found</Link>
+              <Link href="/404">404 not found</Link>
             </div>
             <div className={styles["footer__group"]}>
               <div className={styles["group__icons"]}>
@@ -113,7 +109,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="#">Password protected</Link>
+              <Link href="/protected">Password protected</Link>
             </div>
             <div className={styles["footer__group"]}>
               <div className={styles["group__icons"]}>
@@ -121,7 +117,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="#">Licenses</Link>
+              <Link href="/licenses">Licenses</Link>
             </div>
             <div className={styles["footer__group"]}>
               <div className={styles["group__icons"]}>
@@ -150,9 +146,7 @@ export const Footer = () => {
             </div>
             <div className={styles["footer__company-info"]}>
               <strong className="text--white">Phone:</strong>
-              <span className="text--secondary-light">
-                (+22) 123 - 4567 - 900
-              </span>
+              <span className="text--secondary-light">(+22) 123 - 4567 - 900</span>
             </div>
           </UiList>
         </div>
