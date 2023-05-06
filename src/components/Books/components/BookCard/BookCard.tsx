@@ -42,7 +42,7 @@ export const BookCard = ({
       />
       <div className={styles["book-card__content"]}>
         <div className={styles["book-card__title"]}>
-          <Heading color="primary" size="semi-large" level={level}>
+          <Heading color="primary" size="medium" level={level}>
             {title}
           </Heading>
           {orientation === "vertical" && <p className={styles["book-card__price"]}>${price}</p>}

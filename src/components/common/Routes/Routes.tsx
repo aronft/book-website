@@ -8,6 +8,7 @@ import { ContactUs } from "@/pages/ContactUs/ContactUs";
 import { Blog } from "@/pages/Blog/Blog";
 import { SingleBlog } from "@/pages/Blog/SingleBlog/SingleBlog";
 import { Protected } from "@/pages/Protected/Protected";
+import { Licenses } from "@/pages/Licenses/Licenses";
 export const Routes = () => {
   return (
     <RoutesRouter>
@@ -19,6 +20,7 @@ export const Routes = () => {
         <Route path="articles/:id" element={<SingleBlog />} />
         <Route path="contact-us" element={<ContactUs />} />
         <Route path="protected" element={<Protected />} />
+        <Route path="licenses" element={<Licenses />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
     </RoutesRouter>

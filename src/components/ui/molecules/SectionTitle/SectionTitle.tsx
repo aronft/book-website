@@ -17,7 +17,7 @@ export const SectionTitle = ({
 }: PropsWithChildren<SectionTitleProps>) => {
   return (
     <div className={classNames(styles["section-title"], styles[`section-title--${aligment}`])}>
-      <Heading level="h2" size="medium" color={color}>
+      <Heading level="h2" size="semi-large" color={color}>
         {children}
       </Heading>
       {separator && <Separator orientation="horizontal" size="medium" color="secondary" />}

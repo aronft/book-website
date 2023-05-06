@@ -5,16 +5,17 @@
   font-family: typography.$font-family-secondary;
   font-weight: 700;
   line-height: 1.2;
+
   &--small {
     font-size: typography.$text-md;
   }
 
   &--medium {
-    font-size: typography.$text-xl;
+    font-size: typography.$text-lg;
   }
 
   &--semi-large {
-    font-size: typography.$text-lg;
+    font-size: typography.$text-xl;
   }
 
   &--extra-large {

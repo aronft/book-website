@@ -11,7 +11,7 @@ export const ArticlesSection = () => {
     <section className={styles.article}>
       <Container>
         <div className={styles.article__title}>
-          <Heading level="h2" size="medium">
+          <Heading level="h2" size="semi-large">
             Articles & Resources
           </Heading>
           <Separator color="secondary" orientation="horizontal" size="medium" />

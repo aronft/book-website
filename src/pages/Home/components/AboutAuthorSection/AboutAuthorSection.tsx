@@ -15,7 +15,7 @@ export const AboutAuthorSection = () => {
           </div>
         </div>
         <div className={styles["content__right"]}>
-          <Heading level="h2" size="medium">
+          <Heading level="h2" size="semi-large">
             About Author
           </Heading>
           <div className={styles["author-section__line"]}></div>

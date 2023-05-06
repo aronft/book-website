@@ -26,7 +26,7 @@ export const ConfidenceSection = ({ paddingTop = true, paddingBot = true }: Conf
     >
       <Container>
         <div className={styles["confidence-section__title"]}>
-          <Heading level="h2" size="medium">
+          <Heading level="h2" size="semi-large">
             Trusted by the Best
           </Heading>
           <Separator color="secondary" orientation="horizontal" />

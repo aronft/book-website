@@ -1,0 +1,28 @@
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/colors";
+
+.licenses {
+  padding-block: spacing.$section-inside-space;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 75px;
+  }
+
+  &__row {
+    max-width: 790px;
+    display: flex;
+    flex-direction: column;
+    row-gap: spacing.$tiny;
+  }
+
+  &__description {
+    color: colors.$text-thertiary;
+    line-height: 1.7;
+
+    strong {
+      color: colors.$text-primary;
+      font-weight: 600;
+    }
+  }
+}

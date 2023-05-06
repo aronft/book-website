@@ -12,7 +12,7 @@ export const TestimonialSection = () => {
       <Container className={styles["testimonial-section__content"]}>
         <div className={styles["testimonial-section__left"]}>
           <div className={styles["testimonial-section__title"]}>
-            <Heading level="h2" size="medium">
+            <Heading level="h2" size="semi-large">
               What Readers Say About the Book
             </Heading>
             <Separator color="secondary" orientation="horizontal" size="medium" />
