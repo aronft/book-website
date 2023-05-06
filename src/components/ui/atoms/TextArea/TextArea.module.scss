@@ -1,0 +1,19 @@
+@use "@/styles/settings/colors";
+@use "../Input/Input.module.scss" as formControl;
+
+.text-area-container {
+  --size-svg: 26px;
+  position: relative;
+  .form-control {
+    @include formControl.form-control(var(--size-svg));
+  }
+
+  svg {
+    position: absolute;
+    left: 19px;
+    top: 19px;
+    width: var(--size-svg);
+    height: var(--size-svg);
+    color: colors.$bg-secondary;
+  }
+}
