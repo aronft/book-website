@@ -1,5 +1,6 @@
 import { HeroInfo } from "@/components/common/HeroInfo/HeroInfo";
 import { ContactDetailsSection } from "./components/ContactDetailsSection/ContactDetailsSection";
+import { FrequentQuestions } from "./components/FrequentQuestions/FrequentQuestions";
 
 export const ContactUs = () => {
   return (
@@ -9,6 +10,7 @@ export const ContactUs = () => {
         some form.
       </HeroInfo>
       <ContactDetailsSection />
+      <FrequentQuestions />
     </>
   );
 };
