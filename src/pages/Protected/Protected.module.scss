@@ -22,30 +22,4 @@
     color: colors.$text-thertiary;
     line-height: 1.8;
   }
-
-  &__password-container {
-    position: relative;
-    --size-svg: 26px;
-    input {
-      width: 100%;
-      height: 100%;
-      padding: spacing.$xxs spacing.$xs;
-      padding-left: calc(spacing.$xs + calc(var(--size-svg)) + spacing.$xxs);
-      border: none;
-      color: colors.$text-thertiary;
-      &::placeholder {
-        color: colors.$text-thertiary;
-      }
-    }
-
-    svg {
-      position: absolute;
-      left: 19px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: var(--size-svg);
-      height: var(--size-svg);
-      color: colors.$bg-secondary;
-    }
-  }
 }
