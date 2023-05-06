@@ -1,0 +1,57 @@
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/colors";
+@use "@/styles/settings/typography";
+
+.contact-details {
+  padding-block: spacing.$section-inside-space;
+  &__description {
+    color: colors.$text-thertiary;
+    line-height: 1.8;
+    letter-spacing: -0.01em;
+    margin-bottom: spacing.$sm;
+  }
+
+  &__types-contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: spacing.$xs;
+  }
+}
+
+.content {
+  display: flex;
+  gap: 100px;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: spacing.$sm;
+  }
+
+  &__right {
+    min-width: 600px;
+  }
+}
+
+.contact {
+  display: flex;
+  gap: spacing.$sm;
+  align-items: center;
+  &__icon {
+    background-color: colors.$bg-primary;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      color: colors.$cta-secondary;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &__description {
+    color: colors.$text-thertiary;
+  }
+}
