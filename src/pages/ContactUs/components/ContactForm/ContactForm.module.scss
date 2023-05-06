@@ -1,0 +1,60 @@
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/colors";
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: spacing.$tiny;
+
+  > *:nth-child(3),
+  > *:nth-child(4),
+  > *:nth-child(5),
+  > *:nth-child(6) {
+    grid-column: 1 / -1;
+  }
+
+  > *:nth-child(4) {
+    margin-bottom: spacing.$tiny;
+  }
+
+  > *:nth-child(5) {
+    margin-bottom: spacing.$xs;
+  }
+
+  &__agree {
+    display: flex;
+    column-gap: spacing.$tiny;
+    color: colors.$text-thertiary;
+    line-height: 1.8;
+  }
+
+  .checkbox {
+    position: relative;
+    input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+      border: 1px solid colors.$input-border;
+
+      &:checked {
+        border: 1px solid colors.$bg-primary;
+      }
+
+      &:checked + svg {
+        display: block;
+      }
+    }
+    svg {
+      position: absolute;
+      top: 3px;
+      bottom: 0;
+      left: 3px;
+      right: 0;
+      display: none;
+    }
+  }
+}
