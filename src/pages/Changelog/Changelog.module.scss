@@ -1,0 +1,32 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/spacing";
+
+.changelog {
+  padding-block: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    background-color: #f3f3f3;
+    padding: 53px 89px;
+    display: flex;
+    flex-direction: column;
+    row-gap: spacing.$xs;
+    align-items: center;
+  }
+
+  &__version {
+    background-color: colors.$bg-secondary;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__description {
+    color: colors.$text-thertiary;
+  }
+}

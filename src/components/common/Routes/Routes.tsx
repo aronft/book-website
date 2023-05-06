@@ -9,6 +9,7 @@ import { Blog } from "@/pages/Blog/Blog";
 import { SingleBlog } from "@/pages/Blog/SingleBlog/SingleBlog";
 import { Protected } from "@/pages/Protected/Protected";
 import { Licenses } from "@/pages/Licenses/Licenses";
+import { Changelog } from "@/pages/Changelog/Changelog";
 export const Routes = () => {
   return (
     <RoutesRouter>
@@ -21,6 +22,7 @@ export const Routes = () => {
         <Route path="contact-us" element={<ContactUs />} />
         <Route path="protected" element={<Protected />} />
         <Route path="licenses" element={<Licenses />} />
+        <Route path="changelog" element={<Changelog />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
     </RoutesRouter>
