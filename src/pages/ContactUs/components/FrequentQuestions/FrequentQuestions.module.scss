@@ -1,0 +1,28 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/typography";
+@use "@/styles/settings/spacing";
+
+.section {
+  padding-block: spacing.$section-inside-space;
+  background-color: #f5f8fc;
+}
+
+.frequent-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: spacing.$m;
+  > *:nth-child(1) {
+    width: 100%;
+  }
+}
+
+.questions {
+  ul {
+    flex-wrap: wrap;
+    column-gap: spacing.$xl;
+    row-gap: spacing.$sm;
+  }
+  li {
+    width: calc(100% / 2 - spacing.$xl);
+  }
+}
