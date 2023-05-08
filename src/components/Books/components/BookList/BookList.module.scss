@@ -1,0 +1,12 @@
+@use "@/styles/settings/spacing";
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: spacing.$lg;
+  row-gap: 70px;
+  justify-content: space-between;
+  > * {
+    width: calc(100% / 3 - spacing.$lg);
+  }
+}

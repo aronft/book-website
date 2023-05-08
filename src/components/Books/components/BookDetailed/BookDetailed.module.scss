@@ -1,0 +1,36 @@
+@use "@/styles/settings/spacing";
+
+.book-detailed {
+  display: flex;
+  gap: spacing.$xl;
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    row-gap: spacing.$xs;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: spacing.$xs;
+  }
+}
+
+.detail {
+  display: flex;
+  span {
+    margin-left: auto;
+  }
+  > *:nth-child(1) {
+    width: 25%;
+  }
+
+  > *:nth-child(2) {
+    width: 5%;
+  }
+
+  > *:nth-child(3) {
+    width: 70%;
+  }
+}
