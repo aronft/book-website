@@ -4,7 +4,7 @@ import * as classNames from "classnames";
 import { Link } from "react-router-dom";
 
 export interface ButtonProps {
-  color?: "primary" | "secondary" | "white";
+  color?: "primary" | "secondary" | "white" | "primary-light-alt";
   size?: "small" | "medium" | "large" | "icon" | "auto";
   children: ReactNode;
   type?: "fill" | "outline" | "link";

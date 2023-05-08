@@ -31,6 +31,10 @@
     // --text-color: #{colors.$cta-primary};
   }
 
+  &--primary-light-alt {
+    --bg-color: #{colors.$bg-primary-light-alt};
+  }
+
   &--small {
     padding: spacing.$tiny spacing.$sm;
   }
