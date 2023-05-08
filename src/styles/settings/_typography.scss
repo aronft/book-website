@@ -22,3 +22,15 @@ $text-lg: $_fs-32;
 $text-xl: $_fs-45;
 $text-xxl: $_fs-55;
 $text-huge: $_fs-65;
+
+$text-sizes: (
+  "tiny": $text-tiny,
+  "xxs": $text-xxs,
+  "xs": $text-xs,
+  "sm": $text-sm,
+  "md": $text-md,
+  "lg": $text-lg,
+  "xl": $text-xl,
+  "xxl": $text-xxl,
+  "huge": $text-huge,
+);
