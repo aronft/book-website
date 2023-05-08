@@ -28,7 +28,7 @@ export const Header = () => {
           <Badge badgeContent={"01"} color="secondary">
             <IoCartOutline size={"21px"} color={stylesColor.white} />
           </Badge>
-          <Button color="secondary" size="small">
+          <Button color="secondary" size="small" href="/store" type="fill" colorText="primary">
             Order Today
           </Button>
         </div>

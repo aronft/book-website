@@ -20,7 +20,13 @@ export const ArticleCard = ({ image, title, description, date, level, id }: Arti
         <Heading level={level}>{title}</Heading>
         <p className={styles["article__description"]}>{description}</p>
         <footer className={styles["article__footer"]}>
-          <Button href={`/articles/${id}`} color="primary">
+          <Button
+            href={`/articles/${id}`}
+            color="primary"
+            type="link"
+            size="auto"
+            colorText="primary"
+          >
             Read more
           </Button>
           <span>Author - {date}</span>

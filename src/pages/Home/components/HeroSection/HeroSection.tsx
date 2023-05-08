@@ -16,10 +16,10 @@ export const HeroSection = () => {
             suffered alteration in some form.
           </p>
           <div className={styles["hero-section__actions"]}>
-            <Button color="secondary" size="medium">
+            <Button color="secondary" size="medium" colorText="primary">
               Order Today
             </Button>
-            <Button href="#" color="white">
+            <Button href="#" color="white" type="link" size="auto" colorText="white">
               Read Free Demo
             </Button>
           </div>

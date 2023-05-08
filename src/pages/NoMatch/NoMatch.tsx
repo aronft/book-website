@@ -27,7 +27,7 @@ export const NoMatch = () => {
             The page you are looking for doesn't exist. Please try searching for some other page, or
             return to the website's homepage to find what you're looking for.
           </p>
-          <Button size="medium" type="fill" color="secondary">
+          <Button size="medium" type="fill" color="secondary" colorText="primary">
             Back to Home
           </Button>
         </div>

@@ -67,7 +67,7 @@ export const BookCard = ({
             <p className={styles.type__title}>{type}</p>
           </div>
         )}
-        <Button color="secondary" type="outline">
+        <Button color="secondary" type="outline" colorText="primary">
           Order Today
         </Button>
       </div>

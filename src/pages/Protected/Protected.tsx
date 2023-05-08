@@ -25,7 +25,7 @@ export const Protected = () => {
           <Input placeHolder="Enter your password" type="password">
             <FiKey />
           </Input>
-          <Button color="secondary" size="medium">
+          <Button color="secondary" size="medium" colorText="primary">
             Submit
           </Button>
         </div>

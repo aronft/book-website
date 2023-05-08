@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 export interface ButtonProps {
   color?: "primary" | "secondary" | "white";
-  size?: "small" | "medium" | "large" | "icon";
+  size?: "small" | "medium" | "large" | "icon" | "auto";
   children: ReactNode;
-  type?: "fill" | "outline";
-  colorText?: "white";
+  type?: "fill" | "outline" | "link";
+  colorText?: "white" | "primary" | "secondary";
   href?: string | undefined;
 }
 
@@ -24,7 +24,13 @@ export const Button = ({
     return (
       <Link
         to={href}
-        className={classNames(styles.btn, styles[`btn--link`], styles[`btn--${color}`])}
+        className={classNames(
+          styles.btn,
+          styles[`btn--${color}`],
+          styles[`btn--${size}`],
+          styles[`text--${colorText}`],
+          styles[`btn--${type}`]
+        )}
       >
         {children}
       </Link>
@@ -37,8 +43,8 @@ export const Button = ({
         styles.btn,
         styles[`btn--${color}`],
         styles[`btn--${size}`],
-        styles[`btn--${type}`],
-        styles[`text--${colorText}`]
+        styles[`text--${colorText}`],
+        styles[`btn--${type}`]
       )}
     >
       {children}

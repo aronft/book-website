@@ -35,7 +35,7 @@ export const ContactForm = () => {
         <p>Keep me up to date with news and offers from time to time by email</p>
       </div>
 
-      <Button color="secondary" size="medium">
+      <Button color="secondary" size="medium" colorText="primary">
         Send Message
       </Button>
     </form>

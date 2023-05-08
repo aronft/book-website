@@ -42,7 +42,7 @@ export const AboutAuthorSection = () => {
             necessary, making this the first true generator on the Internet. It uses a dictionary of
             over 200 Latin words, that can combined with a handful of model sentence structures.
           </p>
-          <Button color="secondary" type="fill" size="medium">
+          <Button color="secondary" type="fill" size="medium" colorText="primary">
             Contact now
           </Button>
         </div>
