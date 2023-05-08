@@ -23,6 +23,7 @@ export const Routes = () => {
         <Route path="protected" element={<Protected />} />
         <Route path="licenses" element={<Licenses />} />
         <Route path="changelog" element={<Changelog />} />
+        <Route path="store/*" element={<Store />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
     </RoutesRouter>
