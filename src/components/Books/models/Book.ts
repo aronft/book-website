@@ -1,4 +1,5 @@
 export interface Book {
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -6,4 +7,8 @@ export interface Book {
   length: string;
   price: number;
   type: "print" | "digital" | "vinilo";
+  publisher: string;
+  language: string;
+  isbn: string;
+  dimensions?: string;
 }
