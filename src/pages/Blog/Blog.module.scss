@@ -1,0 +1,7 @@
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/colors";
+
+.articles-section {
+  padding-block: spacing.$section-inside-space;
+  background-color: colors.$bg-primary-light-alt;
+}

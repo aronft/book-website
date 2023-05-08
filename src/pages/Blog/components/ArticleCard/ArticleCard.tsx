@@ -1,5 +1,5 @@
-import { Button } from "../../atoms/Button";
-import { Heading, HeadingProps } from "../../atoms/Heading/Heading";
+import { Button } from "../../../../components/ui/atoms/Button";
+import { Heading, HeadingProps } from "../../../../components/ui/atoms/Heading/Heading";
 import styles from "./ArticleCard.module.scss";
 
 interface ArticleCardProps extends Pick<HeadingProps, "level"> {
@@ -7,9 +7,10 @@ interface ArticleCardProps extends Pick<HeadingProps, "level"> {
   title: string;
   description: string;
   date: string;
+  id: string;
 }
 
-export const ArticleCard = ({ image, title, description, date, level }: ArticleCardProps) => {
+export const ArticleCard = ({ image, title, description, date, level, id }: ArticleCardProps) => {
   return (
     <section className={styles["article"]}>
       <div className={styles["article__image-container"]}>
@@ -19,7 +20,7 @@ export const ArticleCard = ({ image, title, description, date, level }: ArticleC
         <Heading level={level}>{title}</Heading>
         <p className={styles["article__description"]}>{description}</p>
         <footer className={styles["article__footer"]}>
-          <Button href="/articles/1" color="primary">
+          <Button href={`/articles/${id}`} color="primary">
             Read more
           </Button>
           <span>Author - {date}</span>
