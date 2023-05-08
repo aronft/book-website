@@ -1,18 +1,30 @@
 @use "@/styles/settings/spacing";
+@use "@/styles/settings/colors";
 
 .book-portrait {
-  width: 300px;
-  min-width: 300px;
-  height: 400px;
   box-shadow: 0px 20px 25px rgba(4, 11, 20, 0.1);
 
   &--bg {
-    background-color: #f5f8fc;
+    background-color: colors.$bg-primary-light-alt;
     padding: spacing.$lg;
   }
 
+  &--small {
+    height: 400px;
+  }
+
+  &--medium {
+    height: 500px;
+  }
+
+  &--full {
+    height: auto;
+  }
+
   img {
-    width: 100%;
+    width: 300px;
+    min-width: 300px;
     height: 100%;
+    object-fit: contain;
   }
 }
