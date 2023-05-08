@@ -6,7 +6,7 @@ interface TextProps {
   tag: keyof JSX.IntrinsicElements;
   color?: "primary" | "secondary" | "white" | "secondary-light" | "thertiary";
   size?: "tiny" | "xxs" | "xs" | "sm" | "m" | "lg" | "xl";
-  weight?: 400 | 500 | 600 | 700;
+  weight?: 400 | 500 | 600 | 700 | 800;
   fontFamily?: "primary" | "secondary";
 }
 export const Text = ({
