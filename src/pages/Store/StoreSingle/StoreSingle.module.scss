@@ -1,0 +1,46 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/typography";
+@use "@/styles/settings/spacing";
+
+.store-single {
+  padding-block: spacing.$section-inside-space;
+}
+
+.frequent-questions {
+  display: flex;
+  gap: spacing.$xl;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  row-gap: spacing.$tiny;
+}
+
+.section-book {
+  margin-bottom: spacing.$xl;
+  display: flex;
+  flex-direction: column;
+  row-gap: 120px;
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: spacing.$lg;
+    button {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  column-gap: spacing.$tiny;
+  > *:nth-child(1) {
+    flex: 1;
+  }
+
+  > *:nth-child(2) {
+    flex: 3;
+  }
+}
