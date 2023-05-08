@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   row-gap: spacing.$sm;
   max-width: 633px;
   &__description {
