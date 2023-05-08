@@ -1,0 +1,42 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/spacing";
+
+.features-section {
+  background-color: colors.$bg-secondary;
+  padding-block: spacing.$xl;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: spacing.$xl;
+  > * {
+    width: calc(100% / 3 - spacing.$xl);
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  row-gap: spacing.$tiny;
+
+  &__icon-container {
+    --container-size: 80px;
+    width: var(--container-size);
+    height: var(--container-size);
+    background-color: colors.$bg-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: colors.$white;
+    margin-bottom: spacing.$sm;
+
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
