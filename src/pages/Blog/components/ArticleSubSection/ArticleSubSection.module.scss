@@ -1,0 +1,51 @@
+@use "@/styles/settings/colors";
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/typography";
+
+.article-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: spacing.$tiny;
+  &__description {
+    color: colors.$text-thertiary;
+    line-height: 1.8;
+    letter-spacing: -0.01em;
+  }
+
+  &__list {
+    color: colors.$text-primary;
+    margin-bottom: spacing.$sm;
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: spacing.$xs;
+    }
+
+    &--numeric {
+      ul {
+        list-style: numeric;
+        margin-left: calc(spacing.$lg + typography.$text-xs);
+      }
+    }
+
+    &--circle {
+      --circle-size: 20px;
+      padding-left: calc(var(--circle-size) + spacing.$lg + spacing.$xs);
+      li {
+        position: relative;
+      }
+      li::before {
+        content: "";
+        border-radius: 100%;
+        position: absolute;
+        background-color: colors.$bg-secondary;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        margin-left: calc((var(--circle-size) + spacing.$xs) * -1);
+        width: var(--circle-size);
+        height: var(--circle-size);
+      }
+    }
+  }
+}
