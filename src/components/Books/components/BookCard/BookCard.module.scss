@@ -11,6 +11,7 @@ $coulmn-gap: 13px;
 
   &--vertical {
     flex-direction: column;
+    max-width: min-content;
   }
 
   &--horizontal {

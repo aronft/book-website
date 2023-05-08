@@ -7,7 +7,8 @@ import { CircleIcon } from "@/components/ui/atoms/CircleIcon/CircleIcon";
 
 interface BookCardProps
   extends Pick<HeadingProps, "level">,
-    Pick<BookPortraitProps, "type" | "backgroundVisible"> {
+    Pick<BookPortraitProps, "type" | "backgroundVisible">,
+    Pick<BookPortraitProps, "size"> {
   imageSrc: string;
   orientation: "horizontal" | "vertical";
   title: string;
@@ -17,6 +18,7 @@ interface BookCardProps
   price: number;
   type: "print" | "digital" | "vinilo";
   tag: string;
+  id: string;
 }
 export const BookCard = ({
   imageSrc,
@@ -30,6 +32,8 @@ export const BookCard = ({
   level,
   tag,
   backgroundVisible = false,
+  size = "small",
+  id,
 }: BookCardProps) => {
   const Tag = tag;
   return (
@@ -39,6 +43,7 @@ export const BookCard = ({
         imageSrc={imageSrc}
         type={type}
         backgroundVisible={backgroundVisible}
+        size={size}
       />
       <div className={styles["book-card__content"]}>
         <div className={styles["book-card__title"]}>
@@ -67,7 +72,7 @@ export const BookCard = ({
             <p className={styles.type__title}>{type}</p>
           </div>
         )}
-        <Button color="secondary" type="outline" colorText="primary">
+        <Button color="secondary" type="outline" colorText="primary" href={`/store/books/${id}`}>
           Order Today
         </Button>
       </div>
