@@ -1,13 +1,14 @@
 import { Book } from "../models/Book";
 import bookTheDark from "@/assets/images/books/book-the-dark.png";
+import bookAtomic from "@/assets/images/books/book-atomic.png";
 
 export const BOOKS: Book[] = [
   {
     id: "001",
-    title: "The Dark Light",
+    title: "Atomic One’s",
     description:
       "Many variations of passages of Lorem Ipsum willing araise  alteration in some form.",
-    image: bookTheDark,
+    image: bookAtomic,
     pages: 586,
     length: "10 Hours",
     price: 28.0,
@@ -18,14 +19,14 @@ export const BOOKS: Book[] = [
   },
   {
     id: "002",
-    title: "The Dark Light",
+    title: "Atomic One’s",
     description:
       "Many variations of passages of Lorem Ipsum willing araise  alteration in some form.",
-    image: bookTheDark,
+    image: bookAtomic,
     pages: 586,
     length: "10 Hours",
     price: 28.0,
-    type: "print",
+    type: "digital",
     isbn: "9788120345799",
     publisher: "Learning Private Limited (1 January 2021)",
     language: "English",
@@ -35,11 +36,11 @@ export const BOOKS: Book[] = [
     title: "The Dark Light",
     description:
       "Many variations of passages of Lorem Ipsum willing araise  alteration in some form.",
-    image: bookTheDark,
+    image: bookAtomic,
     pages: 586,
     length: "10 Hours",
     price: 28.0,
-    type: "print",
+    type: "vinilo",
     isbn: "9788120345799",
     publisher: "Learning Private Limited (1 January 2021)",
     language: "English",

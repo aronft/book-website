@@ -15,7 +15,9 @@ export const ItemCart = ({ book, quantity }: ItemCartProps) => {
     <div className={styles["item-cart"]}>
       <img src={book.image} alt={book.title} />
       <div className={styles["item-cart__info"]}>
-        <Text tag="p">{book.title}</Text>
+        <Text tag="p" color="primary" size="md" weight={800} fontFamily="secondary">
+          {book.title}
+        </Text>
         <Text tag="span">${book.price}USD</Text>
         <div className={styles["item-cart__actions"]}>
           <Button onClick={removeItem} type="link" colorText="primary" size="auto">
@@ -23,7 +25,7 @@ export const ItemCart = ({ book, quantity }: ItemCartProps) => {
           </Button>
         </div>
       </div>
-      <Input type="text" placeHolder="" />
+      <Input type="text" placeHolder="" value={`${quantity}`} name="quantity" />
     </div>
   );
 };

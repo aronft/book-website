@@ -11,12 +11,14 @@ import { Button } from "@/components/ui/atoms/Button";
 import { IoCartOutline } from "react-icons/io5";
 import { ShoppingCart } from "../components/ShoppingCart/ShoppingCart";
 import { SyntheticEvent, useState } from "react";
-import { useShoppingStore } from "../store/store";
+import { useShoppingStore } from "../store/shoppingStore";
+import { useModalStore } from "@/store/modalStore";
 
 export const StoreSingle = () => {
   const params = useParams();
   const [quantity, setQuantity] = useState(0);
   const { addItem } = useShoppingStore();
+  const { onOpen } = useModalStore();
 
   const { book, loading, error } = useBooksById(params.id);
   const handleSubmit = (event: SyntheticEvent) => {
@@ -30,6 +32,8 @@ export const StoreSingle = () => {
     if (book && quantity > 0) {
       addItem(book, quantity);
     }
+
+    onOpen();
   };
 
   const quantityChange = (event: SyntheticEvent) => {
@@ -67,7 +71,6 @@ export const StoreSingle = () => {
                   <IoCartOutline size={"21px"} />
                   Add to card
                 </Button>
-                <ShoppingCart></ShoppingCart>
               </form>
             </BookDetailed>
           )}

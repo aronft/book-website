@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
-import { Container } from "@/components/objects/Container/Container";
 import { Main } from "../Main/Main";
+import { ShoppingCart } from "@/pages/Store/components/ShoppingCart/ShoppingCart";
 
 export const Layout = () => {
   return (
@@ -12,6 +12,7 @@ export const Layout = () => {
         <Outlet />
       </Main>
       <Footer></Footer>
+      <ShoppingCart></ShoppingCart>
     </>
   );
 };

@@ -4,19 +4,16 @@ import React, { useState } from "react";
 import { ItemCart } from "../ItemCart/ItemCart";
 import styles from "./ShoppingCart.module.scss";
 import { Text } from "@/components/ui/atoms/Text/Text";
-import { useShoppingStore } from "../../store/store";
+import { useShoppingStore } from "../../store/shoppingStore";
 import { BOOKS } from "@/components/Books/data/books";
+import { useModalStore } from "@/store/modalStore";
 
 export const ShoppingCart = () => {
-  const items = useShoppingStore((state) => state.items);
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClose = () => {
-    setIsOpen(false);
-  };
-
+  const { items } = useShoppingStore();
+  const { isOpen, onClose } = useModalStore();
   return (
     <>
-      <Modal isOpen={isOpen} title="Shopping Cart" onClose={handleClose}>
+      <Modal isOpen={isOpen} title="Shopping Cart" onClose={onClose}>
         <div className={styles["shopping-cart"]}>
           <div className={styles["shopping-cart__items"]}>
             {items.map((item, index) => (

@@ -27,7 +27,7 @@ export const Modal = ({ isOpen, onClose, children, title }: PropsWithChildren<Mo
           </Text>
           <AiOutlineClose onClick={onClose} />
         </div>
-        <div>{children}</div>
+        {children}
       </div>
     </>,
 

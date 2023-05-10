@@ -4,7 +4,7 @@ interface InputProps {
   placeHolder: string;
   type: string;
   name: string;
-  onChange: (event: SyntheticEvent) => void;
+  onChange?: (event: SyntheticEvent) => void;
   value?: string;
 }
 
