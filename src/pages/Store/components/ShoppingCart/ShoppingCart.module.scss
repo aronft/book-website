@@ -1,0 +1,22 @@
+@use "@/styles/settings/colors";
+
+.shopping-cart {
+  padding: 62px 77px;
+
+  hr {
+    border-bottom: 1px solid rgba(colors.$cta-primary, 0.2);
+    margin-bottom: 25px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 61px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+  }
+}

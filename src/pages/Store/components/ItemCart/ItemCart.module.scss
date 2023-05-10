@@ -1,0 +1,35 @@
+@use "@/styles/settings/typography";
+
+.item-cart {
+  display: grid;
+  grid-template-columns: 175px 1fr 120px;
+  grid-template-rows: 1fr;
+  align-items: start;
+  margin-bottom: 65px;
+  img {
+    width: 175px;
+    height: 178px;
+    margin-right: 38px;
+  }
+
+  input {
+    grid-column: 3 / span 1;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__actions {
+    margin-top: auto;
+    button {
+      font-size: typography.$text-lg;
+      padding: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

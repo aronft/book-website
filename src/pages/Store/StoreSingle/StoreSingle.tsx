@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import { Input } from "@/components/ui/atoms/Input/Input";
 import { Button } from "@/components/ui/atoms/Button";
 import { IoCartOutline } from "react-icons/io5";
+import { ShoppingCart } from "../components/ShoppingCart/ShoppingCart";
 
 export const StoreSingle = () => {
   const params = useParams();
@@ -36,6 +37,7 @@ export const StoreSingle = () => {
                   <IoCartOutline size={"21px"} />
                   Add to card
                 </Button>
+                <ShoppingCart></ShoppingCart>
               </div>
             </BookDetailed>
           )}
