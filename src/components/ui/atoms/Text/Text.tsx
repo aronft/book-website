@@ -5,7 +5,7 @@ import classNames from "classnames";
 interface TextProps {
   tag: keyof JSX.IntrinsicElements;
   color?: "primary" | "secondary" | "white" | "secondary-light" | "thertiary";
-  size?: "tiny" | "xxs" | "xs" | "sm" | "m" | "lg" | "xl";
+  size?: "tiny" | "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "huge";
   weight?: 400 | 500 | 600 | 700 | 800;
   fontFamily?: "primary" | "secondary";
 }
