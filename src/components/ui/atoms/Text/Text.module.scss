@@ -49,3 +49,13 @@
 .text-size {
   @include text-size(typography.$text-sizes);
 }
+
+.text-font-family {
+  &--primary {
+    font-family: typography.$font-family-primary;
+  }
+
+  &--secondary {
+    font-family: typography.$font-family-secondary;
+  }
+}
