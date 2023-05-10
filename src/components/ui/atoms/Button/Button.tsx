@@ -10,6 +10,7 @@ export interface ButtonProps {
   type?: "fill" | "outline" | "link";
   colorText?: "white" | "primary" | "secondary";
   href?: string | undefined;
+  onClick?: () => void;
 }
 
 export const Button = ({
