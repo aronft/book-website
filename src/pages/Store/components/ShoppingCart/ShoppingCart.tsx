@@ -4,9 +4,12 @@ import React, { useState } from "react";
 import { ItemCart } from "../ItemCart/ItemCart";
 import styles from "./ShoppingCart.module.scss";
 import { Text } from "@/components/ui/atoms/Text/Text";
+import { useShoppingStore } from "../../store/store";
+import { BOOKS } from "@/components/Books/data/books";
 
 export const ShoppingCart = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const items = useShoppingStore((state) => state.items);
+  const [isOpen, setIsOpen] = useState(false);
   const handleClose = () => {
     setIsOpen(false);
   };
@@ -16,7 +19,9 @@ export const ShoppingCart = () => {
       <Modal isOpen={isOpen} title="Shopping Cart" onClose={handleClose}>
         <div className={styles["shopping-cart"]}>
           <div className={styles["shopping-cart__items"]}>
-            <ItemCart title="book" price={30} />
+            {items.map((item, index) => (
+              <ItemCart key={index} book={item.book} quantity={item.quantity} />
+            ))}
           </div>
           <hr />
           <div className={styles["shopping-cart__info"]}>

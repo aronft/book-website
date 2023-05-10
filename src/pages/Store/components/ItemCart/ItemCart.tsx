@@ -2,20 +2,21 @@ import { Button } from "@/components/ui/atoms/Button";
 import { Input } from "@/components/ui/atoms/Input/Input";
 import { Text } from "@/components/ui/atoms/Text/Text";
 import styles from "./ItemCart.module.scss";
+import { Book } from "@/components/Books/models/Book";
 
 export interface ItemCartProps {
-  title: string;
-  price: number;
+  book: Book;
+  quantity: number;
 }
 
-export const ItemCart = ({ title, price, image }: ItemCartProps) => {
+export const ItemCart = ({ book, quantity }: ItemCartProps) => {
   const removeItem = () => {};
   return (
     <div className={styles["item-cart"]}>
-      <img src={image} alt={title} />
+      <img src={book.image} alt={book.title} />
       <div className={styles["item-cart__info"]}>
-        <Text tag="p">{title}</Text>
-        <Text tag="span">${price}USD</Text>
+        <Text tag="p">{book.title}</Text>
+        <Text tag="span">${book.price}USD</Text>
         <div className={styles["item-cart__actions"]}>
           <Button onClick={removeItem} type="link" colorText="primary" size="auto">
             Remove

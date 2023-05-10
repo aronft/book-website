@@ -12,7 +12,6 @@ export interface ModalProps {
 
 export const Modal = ({ isOpen, onClose, children, title }: PropsWithChildren<ModalProps>) => {
   const portalElement = document.getElementById("modal-root");
-  console.log(portalElement);
   if (!portalElement) {
     return null;
   }

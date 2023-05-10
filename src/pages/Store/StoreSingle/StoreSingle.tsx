@@ -10,10 +10,34 @@ import { Input } from "@/components/ui/atoms/Input/Input";
 import { Button } from "@/components/ui/atoms/Button";
 import { IoCartOutline } from "react-icons/io5";
 import { ShoppingCart } from "../components/ShoppingCart/ShoppingCart";
+import { SyntheticEvent, useState } from "react";
+import { useShoppingStore } from "../store/store";
 
 export const StoreSingle = () => {
   const params = useParams();
+  const [quantity, setQuantity] = useState(0);
+  const { addItem } = useShoppingStore();
+
   const { book, loading, error } = useBooksById(params.id);
+  const handleSubmit = (event: SyntheticEvent) => {
+    event.preventDefault();
+    const target = event.target as typeof event.target & {
+      quantity: { value: string };
+    };
+    if (target.quantity.value === "") {
+      console.log("Error ");
+    }
+    if (book && quantity > 0) {
+      addItem(book, quantity);
+    }
+  };
+
+  const quantityChange = (event: SyntheticEvent) => {
+    const target = event.target as typeof event.target & {
+      value: string;
+    };
+    setQuantity(parseInt(target.value, 10));
+  };
 
   return (
     <>
@@ -31,14 +55,20 @@ export const StoreSingle = () => {
               publisher={book.publisher}
               description={book.description}
             >
-              <div className={styles.form}>
-                <Input type="number" placeHolder=""></Input>
+              <form className={styles.form} onSubmit={handleSubmit}>
+                <Input
+                  type="number"
+                  placeHolder=""
+                  name="quantity"
+                  onChange={quantityChange}
+                  value={`${quantity}`}
+                ></Input>
                 <Button color="secondary" colorText="primary" size="medium">
                   <IoCartOutline size={"21px"} />
                   Add to card
                 </Button>
                 <ShoppingCart></ShoppingCart>
-              </div>
+              </form>
             </BookDetailed>
           )}
           <div className={styles["section-book__actions"]}>
