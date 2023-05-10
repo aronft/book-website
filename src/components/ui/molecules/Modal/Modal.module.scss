@@ -1,0 +1,35 @@
+@use "@/styles/settings/colors";
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: colors.$bg-primray-80;
+  height: 100%;
+  width: 100%;
+}
+
+.modal {
+  position: absolute;
+  z-index: 2;
+  top: 100px;
+  left: 0;
+  right: 0;
+
+  width: 800px;
+  margin-inline: auto;
+  background-color: white;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 76px;
+    background-color: colors.$bg-secondary;
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
