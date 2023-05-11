@@ -3,6 +3,7 @@
 
 .book-portrait {
   box-shadow: 0px 20px 25px rgba(4, 11, 20, 0.1);
+  position: relative;
 
   &--bg {
     background-color: colors.$bg-primary-light-alt;
@@ -21,10 +22,18 @@
     height: auto;
   }
 
-  img {
+  &__image {
     width: 300px;
     min-width: 300px;
     height: 100%;
     object-fit: contain;
+  }
+
+  &__type {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 }
