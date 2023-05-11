@@ -14,6 +14,7 @@ interface BookDetailedProps extends Pick<BookPortraitProps, "type"> {
   pages: number;
   isbn: string;
   dimensions?: string;
+  price: number;
 }
 export const BookDetailed = ({
   image,
@@ -26,6 +27,7 @@ export const BookDetailed = ({
   isbn,
   dimensions,
   children,
+  price,
 }: PropsWithChildren<BookDetailedProps>) => {
   return (
     <div className={styles["book-detailed"]}>
@@ -36,9 +38,9 @@ export const BookDetailed = ({
           {title}
         </Heading>
         <Text tag="span" color="secondary" size="lg" weight={800}>
-          $30.
+          ${price}
           <Text tag="span" color="secondary" size="xs" weight={800}>
-            00 USD
+            USD
           </Text>
         </Text>
         <Text tag="p">{description}</Text>

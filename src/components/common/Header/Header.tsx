@@ -10,9 +10,11 @@ import { IoCartOutline } from "react-icons/io5";
 import stylesColor from "@/styles/settings/colors-map.module.scss";
 import { Badge } from "@/components/ui/atoms/Badge/Badge";
 import { useModalStore } from "@/store/modalStore";
+import { useShoppingStore } from "@/pages/Store/store/shoppingStore";
 
 export const Header = () => {
   const { onOpen } = useModalStore();
+  const { getTotalItems } = useShoppingStore();
   return (
     <header className={styles.header}>
       <Container>
@@ -27,7 +29,7 @@ export const Header = () => {
         </div>
         <div className={styles["header__right"]}>
           <Menu />
-          <Badge badgeContent={"01"} color="secondary" onClick={onOpen}>
+          <Badge badgeContent={`${getTotalItems()}`} color="secondary" onClick={onOpen}>
             <IoCartOutline size={"21px"} color={stylesColor.white} />
           </Badge>
           <Button color="secondary" size="small" href="/store" type="fill" colorText="primary">

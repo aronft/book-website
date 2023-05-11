@@ -6,6 +6,8 @@ interface ShoppingStoreState {
   items: CartItem[];
   addItem: (book: Book, quantity: number) => void;
   removeItem: (book: Book) => void;
+  getTotal: () => number;
+  getTotalItems: () => number;
 }
 
 export const useShoppingStore = create<ShoppingStoreState>()((set, get) => ({
@@ -30,5 +32,12 @@ export const useShoppingStore = create<ShoppingStoreState>()((set, get) => ({
     const { items } = get();
     const newState = items.filter((item) => item.book.id !== book.id);
     set((state) => ({ ...state, items: newState }));
+  },
+
+  getTotal: () => {
+    return get().items.reduce((total, item) => total + item.book.price * item.quantity, 0);
+  },
+  getTotalItems: () => {
+    return get().items.reduce((total, item) => total + item.quantity, 0);
   },
 }));

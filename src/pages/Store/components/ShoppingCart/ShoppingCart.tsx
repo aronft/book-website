@@ -9,7 +9,7 @@ import { BOOKS } from "@/components/Books/data/books";
 import { useModalStore } from "@/store/modalStore";
 
 export const ShoppingCart = () => {
-  const { items } = useShoppingStore();
+  const { items, getTotal } = useShoppingStore();
   const { isOpen, onClose } = useModalStore();
   return (
     <>
@@ -26,7 +26,7 @@ export const ShoppingCart = () => {
               Sub-Total
             </Text>
             <Text tag="span" weight={800} color="primary">
-              $60.00 usd
+              {getTotal()} usd
             </Text>
           </div>
           <div className={styles["shopping-cart__footer"]}>

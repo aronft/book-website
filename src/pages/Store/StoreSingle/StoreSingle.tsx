@@ -58,6 +58,7 @@ export const StoreSingle = () => {
               pages={book.pages}
               publisher={book.publisher}
               description={book.description}
+              price={book.price}
             >
               <form className={styles.form} onSubmit={handleSubmit}>
                 <Input
