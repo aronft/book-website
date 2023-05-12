@@ -10,6 +10,7 @@ import { SingleBlog } from "@/pages/Blog/SingleBlog/SingleBlog";
 import { Protected } from "@/pages/Protected/Protected";
 import { Licenses } from "@/pages/Licenses/Licenses";
 import { Changelog } from "@/pages/Changelog/Changelog";
+import { StyleGuide } from "@/pages/StyleGuide/StyleGuide";
 export const Routes = () => {
   return (
     <RoutesRouter>
@@ -18,6 +19,7 @@ export const Routes = () => {
         <Route path="about" element={<About />} />
         <Route path="store" element={<Store />} />
         <Route path="articles" element={<Blog />} />
+        <Route path="style-guide" element={<StyleGuide />} />
         <Route path="articles/:id" element={<SingleBlog />} />
         <Route path="contact-us" element={<ContactUs />} />
         <Route path="protected" element={<Protected />} />

@@ -1,12 +1,46 @@
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/typography";
+@use "@/styles/settings/colors";
+
 .ui-list {
   display: flex;
   list-style: none;
   padding: 0;
   &--vertical {
     flex-direction: column;
+    row-gap: spacing.$tiny;
   }
 
   &--horizontal {
     flex-direction: row;
+  }
+
+  &--numeric {
+    list-style: numeric;
+    margin-left: typography.$text-xs;
+  }
+
+  &--circle {
+    --circle-size: 20px;
+    margin-left: calc(var(--circle-size) + spacing.$xs);
+    li {
+      position: relative;
+    }
+    li::before {
+      content: "";
+      border-radius: 100%;
+      position: absolute;
+      background-color: colors.$bg-secondary;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      margin-left: calc((var(--circle-size) + spacing.$xs) * -1);
+      width: var(--circle-size);
+      height: var(--circle-size);
+    }
+  }
+
+  &-spacing--medium {
+    padding-left: spacing.$xl;
   }
 }

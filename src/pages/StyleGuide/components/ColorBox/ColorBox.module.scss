@@ -1,0 +1,23 @@
+@use "@/styles/settings/spacing";
+@use "@/styles/settings/colors";
+
+@mixin boxes-color($colors) {
+  @each $name, $color in $colors {
+    &--#{$name} {
+      background-color: $color;
+    }
+  }
+}
+
+.box-container {
+  max-width: min-content;
+  text-align: center;
+}
+
+.box {
+  --box-size: 200px;
+  height: var(--box-size);
+  width: var(--box-size);
+  margin-bottom: spacing.$xs;
+  @include boxes-color(colors.$colors);
+}

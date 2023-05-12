@@ -27,7 +27,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="#">Home</Link>
+              <Link href="/">Home</Link>
             </div>
 
             <div className={styles["footer__group"]}>
@@ -36,7 +36,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="#">About Us</Link>
+              <Link href="/about-us">About Us</Link>
             </div>
             <div className={styles["footer__group"]}>
               <div className={styles["group__icons"]}>
@@ -44,7 +44,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="#">Services</Link>
+              <Link href="/services">Services</Link>
             </div>
             <div className={styles["footer__group"]}>
               <div className={styles["group__icons"]}>
@@ -52,7 +52,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="#">Appointments</Link>
+              <Link href="/appointments">Appointments</Link>
             </div>
             <div className={styles["footer__group"]}>
               <div className={styles["group__icons"]}>
@@ -84,7 +84,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="#">Start here</Link>
+              <Link href="/start-here">Start here</Link>
             </div>
 
             <div className={styles["footer__group"]}>
@@ -93,7 +93,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="#">Style guide</Link>
+              <Link href="/style-guide">Style guide</Link>
             </div>
             <div className={styles["footer__group"]}>
               <div className={styles["group__icons"]}>
@@ -125,7 +125,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="#">Changelog</Link>
+              <Link href="/changelog">Changelog</Link>
             </div>
           </UiList>
         </div>

@@ -1,0 +1,66 @@
+@use "@/styles/settings/spacing";
+
+.style-guide {
+  padding-block: spacing.$section-inside-space;
+  display: flex;
+  flex-direction: column;
+  row-gap: 126px;
+  h2 {
+    margin-bottom: spacing.$xxs;
+  }
+
+  &__section-paragraph {
+    display: flex;
+    column-gap: 162px;
+  }
+
+  &__section-button {
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: spacing.$sm;
+    }
+
+    .buttons__row {
+      display: flex;
+      gap: spacing.$sm;
+    }
+  }
+
+  &__section-title {
+    .headings {
+      display: flex;
+      flex-direction: column;
+      row-gap: spacing.$xs;
+    }
+  }
+
+  &__section-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: spacing.$lg;
+  }
+
+  &__section-input {
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: spacing.$xxs;
+      > * {
+        grid-column: 1/-1;
+      }
+
+      > *:nth-child(1) {
+        grid-column: span 1;
+      }
+      > *:nth-child(2) {
+        grid-column: span 1;
+      }
+    }
+  }
+}
+
+.colors {
+  display: flex;
+  gap: spacing.$m;
+}

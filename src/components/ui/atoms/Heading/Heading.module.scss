@@ -6,6 +6,10 @@
   font-weight: 700;
   line-height: 1.2;
 
+  &--tiny {
+    font-size: typography.$text-sm;
+  }
+
   &--small {
     font-size: typography.$text-md;
   }

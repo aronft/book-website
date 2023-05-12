@@ -30,13 +30,8 @@ export const ArticleSubSection = ({
         page when looking at its layout. The point of using Lorem Ipsum is that it has less normal
         distribution of letters, as opposed.
       </p>
-      <div
-        className={classNames(
-          styles["article-section__list"],
-          styles[`article-section__list--${listTye}`]
-        )}
-      >
-        <UiList>
+      <div className={classNames(styles["article-section__list"])}>
+        <UiList type={listTye}>
           <>It has roots in a piece of classical Latin literature from 45 BC, To generate Lorem</>
           <>Ipsum which looks reasonable</>
           <>The first line of Lorem Ipsum, "Lorem ipsum” dolor sit amet</>

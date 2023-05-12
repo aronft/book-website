@@ -20,32 +20,5 @@
       flex-direction: column;
       row-gap: spacing.$xs;
     }
-
-    &--numeric {
-      ul {
-        list-style: numeric;
-        margin-left: calc(spacing.$lg + typography.$text-xs);
-      }
-    }
-
-    &--circle {
-      --circle-size: 20px;
-      padding-left: calc(var(--circle-size) + spacing.$lg + spacing.$xs);
-      li {
-        position: relative;
-      }
-      li::before {
-        content: "";
-        border-radius: 100%;
-        position: absolute;
-        background-color: colors.$bg-secondary;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        margin-left: calc((var(--circle-size) + spacing.$xs) * -1);
-        width: var(--circle-size);
-        height: var(--circle-size);
-      }
-    }
   }
 }

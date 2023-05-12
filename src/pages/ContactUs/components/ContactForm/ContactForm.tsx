@@ -7,6 +7,7 @@ import { BsPencilSquare } from "react-icons/bs";
 import styles from "./ContactForm.module.scss";
 import { Button } from "@/components/ui/atoms/Button";
 import { BsCheckLg } from "react-icons/bs";
+import { Checkbox } from "@/components/ui/atoms/Checkbox/Checkbox";
 
 export const ContactForm = () => {
   return (
@@ -27,13 +28,7 @@ export const ContactForm = () => {
         <BsPencilSquare />
       </TextArea>
 
-      <div className={styles["contact-form__agree"]}>
-        <label className={styles["checkbox"]}>
-          <input type="checkbox" name="" id="" />
-          <BsCheckLg />
-        </label>
-        <p>Keep me up to date with news and offers from time to time by email</p>
-      </div>
+      <Checkbox text="Keep me up to date with news and offers from time to time by email" />
 
       <Button color="secondary" size="medium" colorText="primary">
         Send Message
