@@ -58,7 +58,7 @@ export const ChapterOverviewSection = () => {
         </div>
 
         <footer className={styles["chapter-overview__footer"]}>
-          <Button color="secondary" size="large" colorText="primary">
+          <Button color="secondary" size="large" colorText="primary" href="/contact-us">
             Start a 15-Days Free Trail
           </Button>
           <div className={styles.footer__description}>

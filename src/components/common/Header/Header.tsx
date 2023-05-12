@@ -32,7 +32,7 @@ export const Header = () => {
           <Badge badgeContent={`${getTotalItems()}`} color="secondary" onClick={onOpen}>
             <IoCartOutline size={"21px"} color={stylesColor.white} />
           </Badge>
-          <Button color="secondary" size="small" href="/store" type="fill" colorText="primary">
+          <Button color="secondary" size="small" href="/contact-us" type="fill" colorText="primary">
             Order Today
           </Button>
         </div>

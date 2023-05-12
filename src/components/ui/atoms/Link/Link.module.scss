@@ -23,4 +23,8 @@
       color: darken(colors.$white, 10);
     }
   }
+
+  &--active {
+    color: colors.$cta-secondary;
+  }
 }

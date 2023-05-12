@@ -16,7 +16,7 @@ export const GetBookSection = () => {
             This the first true value generator on the Internet. It uses alphas dictionary of over
             200 Latin words.
           </p>
-          <Button color="secondary" type="outline" size="medium" colorText="white">
+          <Button color="secondary" type="outline" size="medium" colorText="white" href="/store">
             Order Today
           </Button>
         </div>

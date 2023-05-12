@@ -11,7 +11,7 @@
     color: colors.$text-thertiary;
   }
 
-  &--paddnig-left {
+  &--padding-left {
     padding-left: calc(spacing.$xs + $size-svg + spacing.$xxs);
   }
 }
@@ -22,7 +22,6 @@
   .form-control {
     @include form-control(var(--size-svg));
   }
-
   svg {
     position: absolute;
     left: 19px;

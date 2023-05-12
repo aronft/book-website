@@ -1,5 +1,6 @@
 import { PropsWithChildren, SyntheticEvent } from "react";
 import styles from "./Input.module.scss";
+import classNames from "classnames";
 interface InputProps {
   placeHolder: string;
   type: string;
@@ -16,12 +17,12 @@ export const Input = ({
   onChange,
   value,
 }: PropsWithChildren<InputProps>) => {
-  const paddingChildren = !children ? "" : styles["input-container--padding-left"];
+  const paddingChildren = !children ? "" : styles["form-control--padding-left"];
   return (
     <div className={styles["input-container"]}>
-      <div className={paddingChildren}>{children}</div>
+      {children}
       <input
-        className={styles["form-control"]}
+        className={classNames(styles["form-control"], paddingChildren)}
         type={type}
         placeholder={placeHolder}
         name={name}
