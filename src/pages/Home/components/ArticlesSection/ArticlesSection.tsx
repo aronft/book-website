@@ -6,7 +6,9 @@ import womenReadingImage from "@/assets/images/articles/women-reading.png";
 import girlReadingImage from "@/assets/images/articles/girl-reading.png";
 import bookImage from "@/assets/images/articles/book.png";
 import { ArticleCard } from "@/pages/Blog/components/ArticleCard/ArticleCard";
+import { useAritcles } from "@/pages/Blog/hooks/useArticles";
 export const ArticlesSection = () => {
+  const { articles } = useAritcles(3);
   return (
     <section className={styles.article}>
       <Container>
@@ -17,28 +19,17 @@ export const ArticlesSection = () => {
           <Separator color="secondary" orientation="horizontal" size="medium" />
         </div>
         <div className={styles.article__articles}>
-          <ArticleCard
-            title="The energy efficiency offers hydrotherapy or swim"
-            description="The point of using Lorem Ipsum hiter of that using making it look like others readable will get end."
-            level="h3"
-            date="23.05.2022"
-            image={womenReadingImage}
-          />
-          <ArticleCard
-            title="Release of Letraset sheets tools containing  passages"
-            description="The point of using Lorem Ipsum hiter of that using making it look like others readable will get end."
-            level="h3"
-            date="23.05.2022"
-            image={bookImage}
-          />
-
-          <ArticleCard
-            title="The energy efficiency offers hydrotherapy or swim"
-            description="loremThe point of using Lorem Ipsum hiter of that using making it look like others readable will get end."
-            level="h3"
-            date="23.05.2022"
-            image={girlReadingImage}
-          />
+          {articles.map((article) => (
+            <ArticleCard
+              key={article.id}
+              id={article.id}
+              title={article.title}
+              description={article.description}
+              level="h3"
+              date={article.date}
+              image={article.image}
+            />
+          ))}
         </div>
       </Container>
     </section>

@@ -6,34 +6,14 @@ import styles from "./AuthorBooksSection.module.scss";
 import bookAtomicImage from "@/assets/images/books/book-atomic.png";
 import bookTheDark from "@/assets/images/books/book-the-dark.png";
 import colerStyles from "@/styles/settings/colors-map.module.scss";
+import { useBooksByLimit } from "../../hooks/useBooksByLimit";
 
 interface AuthorBooksSectionProps {
   color?: string;
 }
 
 export const AuthorBooksSection = ({ color = colerStyles.white }: AuthorBooksSectionProps) => {
-  const books: Book[] = [
-    {
-      title: "Atomic One’s",
-      description:
-        "Many variations of passages of Lorem Ipsum willing araise  alteration in some form.",
-      image: bookAtomicImage,
-      pages: 586,
-      length: "10 Hours",
-      price: 28.0,
-      type: "print",
-    },
-    {
-      title: "The Dark Light",
-      description:
-        "Many variations of passages of Lorem Ipsum willing araise  alteration in some form.",
-      image: bookTheDark,
-      pages: 586,
-      length: "10 Hours",
-      price: 28.0,
-      type: "print",
-    },
-  ];
+  const { books } = useBooksByLimit(2);
 
   return (
     <section className={styles["author-books"]} style={{ backgroundColor: color }}>
@@ -52,6 +32,8 @@ export const AuthorBooksSection = ({ color = colerStyles.white }: AuthorBooksSec
               price={book.price}
               length={book.length}
               type={book.type}
+              id={book.id}
+              size="small"
               orientation="horizontal"
               tag="section"
               level="h3"
