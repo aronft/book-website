@@ -8,8 +8,8 @@
   align-items: center;
 
   &__content {
-    background-color: #f3f3f3;
-    padding: 53px 89px;
+    background-color: colors.$grey-concrete;
+    padding: spacing.$lg spacing.$xl;
     display: flex;
     flex-direction: column;
     row-gap: spacing.$xs;

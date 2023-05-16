@@ -24,7 +24,7 @@
   &__companies {
     display: flex;
     justify-content: space-between;
-    gap: 94px;
+    gap: spacing.$xl;
   }
 }
 
@@ -37,12 +37,12 @@
   &__image {
     width: 100%;
     height: 100px;
-    margin-bottom: 28px;
+    margin-bottom: spacing.$sm;
     object-fit: contain;
   }
 
   h3 {
-    margin-bottom: 10px;
+    margin-bottom: spacing.$tiny;
   }
 
   &__description {
