@@ -1,6 +1,8 @@
 @use "@/styles/settings/colors";
 @use "@/styles/settings/typography";
 @use "@/styles/settings/spacing";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .confidence-section {
   text-align: center;
@@ -24,15 +26,25 @@
   &__companies {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: spacing.$xl;
   }
 }
 
 .company {
-  flex-basis: calc(100% / 4);
+  flex-basis: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-inline: auto;
+
+  @include mixins.media-query(sizes.$tablet-vw) {
+    flex-basis: calc(100% / 3 - spacing.$xl);
+  }
+
+  @include mixins.media-query(sizes.$desktop-vw) {
+    flex-basis: calc(100% / 4 - spacing.$xl);
+  }
 
   &__image {
     width: 100%;
