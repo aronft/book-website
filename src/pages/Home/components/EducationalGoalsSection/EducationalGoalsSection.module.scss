@@ -1,38 +1,49 @@
 @use "@/styles/settings/typography";
 @use "@/styles/settings/spacing";
 @use "@/styles/settings/colors";
-
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 .education {
   padding-block: spacing.$section-inside-space;
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     gap: spacing.$lg;
 
-    > *:nth-child(1) {
-      grid-column: 1 / span 2;
+    justify-items: center;
+
+    @include mixins.media-query(sizes.$tablet-vw) {
+      grid-template-columns: repeat(2, 1fr);
+      > *:nth-child(1) {
+        grid-column: 1 / span 2;
+      }
     }
   }
 
   &__goals {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: spacing.$sm;
-    > * {
-      width: calc(100% / 2 - spacing.$sm);
+
+    @include mixins.media-query(sizes.$tablet-vw) {
+      flex-direction: row;
+      > * {
+        width: calc(100% / 2 - spacing.$sm);
+      }
     }
   }
 }
 
 .content {
   &__left {
-    max-width: 600px;
+    // max-width: 600px;
     padding-block: spacing.$sm;
   }
   &__right {
-    max-width: 590px;
+    // max-width: 590px;
   }
 }
 
