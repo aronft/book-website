@@ -9,3 +9,13 @@
     @warn "No existe el tamaño especificado en el mapa.";
   }
 }
+
+@mixin max-media-query($size) {
+  @if map-has-key(sizes.$screen-sizes, $size) {
+    @media (max-width: map-get(sizes.$screen-sizes, $size)) {
+      @content;
+    }
+  } @else {
+    @warn "No existe el tamaño especificado en el mapa.";
+  }
+}

@@ -1,13 +1,19 @@
 $desktop: 1300px;
+$tablet-xs: 768px;
+$tablet: 1024px;
 $mobile: 425px;
 $mobile-xs: 375px;
 
 $mobile-vw-xs: "MOBILE_WW-XS";
 $mobile-vw: "MOBILE_VW";
+$tablet-xs-vw: "TABLET-XS-VW";
+$tablet-vw: "TABLET-VW";
 $desktop-vw: "DESKTOP_VW";
 
 $screen-sizes: (
   #{$mobile-vw-xs}: $mobile-xs,
   #{$mobile-vw}: $mobile,
+  #{$tablet-xs-vw}: $tablet-xs,
+  #{$tablet-vw}: $tablet,
   #{$desktop-vw}: $desktop
 );

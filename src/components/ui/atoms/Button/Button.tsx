@@ -20,6 +20,7 @@ export const Button = ({
   type = "fill",
   href,
   colorText = "white",
+  onClick,
 }: ButtonProps) => {
   if (href) {
     return (
@@ -40,6 +41,7 @@ export const Button = ({
 
   return (
     <button
+      onClick={onClick}
       className={classNames(
         styles.btn,
         styles[`btn--${color}`],
