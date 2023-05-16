@@ -20,7 +20,7 @@ export const Footer = () => {
           <Heading level="h3" size="small" color="white">
             Explore
           </Heading>
-          <UiList orientation="vertical">
+          <UiList orientation="vertical" space="none">
             <div className={styles["footer__group"]}>
               <div className={styles["group__icons"]}>
                 <img src={done} alt="" />
@@ -77,7 +77,7 @@ export const Footer = () => {
           <Heading level="h3" size="small" color="white">
             Utility Pages
           </Heading>
-          <UiList orientation="vertical">
+          <UiList orientation="vertical" space="none">
             <div className={styles["footer__group"]}>
               <div className={styles["group__icons"]}>
                 <img src={done} alt="" />
@@ -133,7 +133,7 @@ export const Footer = () => {
           <Heading level="h3" size="small" color="white">
             Keep in Touch
           </Heading>
-          <UiList orientation="vertical">
+          <UiList orientation="vertical" space="none">
             <div className={styles["footer__company-info"]}>
               <strong className="text--white">Address:</strong>
               <span className="text--secondary-light">

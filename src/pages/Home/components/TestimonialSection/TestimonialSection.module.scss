@@ -19,7 +19,9 @@
   }
 
   &__left {
-    min-width: 410px;
+    @include mixins.media-query(sizes.$desktop-vw) {
+      min-width: 410px;
+    }
   }
 
   &__title {

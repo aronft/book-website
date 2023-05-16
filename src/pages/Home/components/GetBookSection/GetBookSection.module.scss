@@ -28,8 +28,10 @@
 
   &__right {
     max-width: 640px;
-    img {
-      margin-left: 34px;
+    @include mixins.media-query(sizes.$tablet-vw) {
+      img {
+        margin-left: 34px;
+      }
     }
   }
 

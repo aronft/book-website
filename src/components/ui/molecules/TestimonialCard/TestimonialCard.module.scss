@@ -1,6 +1,8 @@
 @use "@/styles/settings/colors";
 @use "@/styles/settings/typography";
 @use "@/styles/settings/spacing";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .testimonial {
   background-color: colors.$bg-primary;
@@ -24,9 +26,14 @@
 
 .user {
   display: flex;
-  column-gap: 20px;
-  align-items: center;
+  gap: 20px;
   margin-bottom: spacing.$xs;
+  flex-direction: column;
+
+  @include mixins.media-query(sizes.$mobile-vw) {
+    align-items: center;
+    flex-direction: row;
+  }
 
   &__name {
     color: colors.$white;
