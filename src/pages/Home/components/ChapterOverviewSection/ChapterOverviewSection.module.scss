@@ -1,6 +1,8 @@
 @use "@/styles/settings/colors";
 @use "@/styles/settings/typography";
 @use "@/styles/settings/spacing";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .chapter-overview {
   padding-block: spacing.$section-inside-space;
@@ -15,11 +17,15 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: spacing.$m;
     margin-bottom: spacing.$sm;
 
-    > * {
-      width: calc(100% / 2 - spacing.$m);
+    @include mixins.media-query(sizes.$tablet-vw) {
+      flex-direction: row;
+      > * {
+        width: calc(100% / 2 - spacing.$m);
+      }
     }
   }
 

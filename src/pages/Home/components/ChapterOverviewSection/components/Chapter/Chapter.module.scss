@@ -1,6 +1,8 @@
 @use "@/styles/settings/colors";
 @use "@/styles/settings/typography";
 @use "@/styles/settings/spacing";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .chapter {
   background-color: colors.$white;
@@ -19,6 +21,10 @@
   &__footer {
     display: flex;
     gap: spacing.$xxs;
+    flex-direction: column;
+    @include mixins.media-query(sizes.$tablet-xs-vw) {
+      flex-direction: row;
+    }
   }
 
   &__details-container {
