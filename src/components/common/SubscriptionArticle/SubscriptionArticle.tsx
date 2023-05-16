@@ -21,7 +21,7 @@ const SubscriptionArticle = ({ level }: SubscriptionArticleProps) => {
           </p>
         </div>
         <form action="" className={styles["subscription-article__form"]}>
-          <label htmlFor="email">Email</label>
+          {/* <label htmlFor="email">Email</label> */}
           <input type="text" name="email" placeholder="Your email id..." />
           <Button color="primary" size="medium" colorText="white">
             Subscribe

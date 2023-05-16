@@ -1,6 +1,8 @@
 @use "@/styles/settings/colors";
 @use "@/styles/settings/spacing";
 @use "@/styles/settings/typography";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .subscription-article {
   padding-block: spacing.$section-inside-space;
@@ -21,9 +23,15 @@
   }
 
   &__form {
-    width: 840px;
     display: flex;
+    width: 80%;
+    flex-direction: column;
     column-gap: spacing.$tiny;
+    row-gap: spacing.$xs;
+
+    @include mixins.media-query(sizes.$tablet-xs-vw) {
+      flex-direction: row;
+    }
 
     input {
       padding: 17px 24px;
