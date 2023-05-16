@@ -1,5 +1,7 @@
 @use "@/styles/settings/spacing";
 @use "@/styles/settings/colors";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .article {
   padding-block: spacing.$section-inside-space;
@@ -17,9 +19,13 @@
     display: flex;
     gap: spacing.$m;
     justify-content: space-between;
+    flex-direction: column;
 
-    > * {
-      flex-basis: calc(100% / 3);
+    @include mixins.media-query(sizes.$tablet-xs-vw) {
+      flex-direction: row;
+      > * {
+        flex-basis: calc(100% / 3);
+      }
     }
   }
 }

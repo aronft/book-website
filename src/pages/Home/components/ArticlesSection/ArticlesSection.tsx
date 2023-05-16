@@ -2,9 +2,6 @@ import { Heading } from "@/components/ui/atoms/Heading/Heading";
 import { Separator } from "@/components/ui/atoms/Separator/Separator";
 import { Container } from "@/components/ui/objects/Container/Container";
 import styles from "./ArticleSection.module.scss";
-import womenReadingImage from "@/assets/images/articles/women-reading.png";
-import girlReadingImage from "@/assets/images/articles/girl-reading.png";
-import bookImage from "@/assets/images/articles/book.png";
 import { ArticleCard } from "@/pages/Blog/components/ArticleCard/ArticleCard";
 import { useAritcles } from "@/pages/Blog/hooks/useArticles";
 export const ArticlesSection = () => {
