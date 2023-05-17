@@ -1,14 +1,18 @@
 @use "@/styles/settings/spacing";
 @use "@/styles/settings/typography";
 @use "@/styles/settings/colors";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .no-match {
-  position: relative;
-  // min-height: 1200px;
   padding-block: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &__bg {
     top: 0;
@@ -19,13 +23,18 @@
   }
 
   &__content {
-    max-width: 589px;
     position: relative;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
     row-gap: spacing.$xxs;
+    @include mixins.media-query(sizes.$tablet-vw) {
+      max-width: 589px;
+    }
   }
 
   &__description {
