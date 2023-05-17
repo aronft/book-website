@@ -1,5 +1,7 @@
 @use "@/styles/settings/spacing";
 @use "@/styles/settings/colors";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 @mixin boxes-color($colors) {
   @each $name, $color in $colors {
@@ -10,14 +12,18 @@
 }
 
 .box-container {
-  max-width: min-content;
   text-align: center;
 }
 
 .box {
   --box-size: 200px;
-  height: var(--box-size);
-  width: var(--box-size);
+  width: 100%;
+  min-height: var(--box-size);
+  min-width: var(--box-size);
   margin-bottom: spacing.$xs;
   @include boxes-color(colors.$colors);
+
+  @include mixins.media-query(sizes.$tablet-vw) {
+    width: initial;
+  }
 }
