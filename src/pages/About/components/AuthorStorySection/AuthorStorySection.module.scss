@@ -1,6 +1,8 @@
 @use "@/styles/settings/colors";
 @use "@/styles/settings/spacing";
 @use "@/styles/settings/typography";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .author-story {
   padding-block: spacing.$section-inside-space;
@@ -8,6 +10,10 @@
   &__content {
     display: flex;
     column-gap: 100px;
+    flex-direction: column;
+    @include mixins.media-query(sizes.$desktop-vw) {
+      flex-direction: row;
+    }
   }
 
   &__description {
@@ -17,8 +23,12 @@
   }
 
   &__image-container {
-    min-width: 600px;
     height: 650px;
+
+    @include mixins.media-query(sizes.$desktop-vw) {
+      min-width: 600px;
+    }
+
     img {
       width: 100%;
       object-fit: cover;
@@ -42,7 +52,10 @@
   --number-size: 65px;
   --padding-left: 45px;
   position: relative;
-  padding-left: var(--padding-left);
+
+  @include mixins.media-query(sizes.$desktop-vw) {
+    padding-left: var(--padding-left);
+  }
 
   &::before {
     content: "";
@@ -51,12 +64,16 @@
     top: 50%;
     transform: translateY(-60%);
     position: absolute;
-    left: var(--padding-left);
+    left: 0;
     background-image: linear-gradient(black 33%, rgba(255, 255, 255, 0) 0%);
     background-position: calc(var(--number-size) / 2);
     background-size: 2px 12px;
     background-repeat: repeat-y;
     z-index: -1;
+
+    @include mixins.media-query(sizes.$desktop-vw) {
+      left: var(--padding-left);
+    }
   }
 
   &__row {

@@ -4,7 +4,7 @@
 
 .container {
   max-width: 100%;
-  width: sizes.$desktop;
+  width: 100%;
   margin-inline: auto;
   padding-inline: spacing.$xs;
 
@@ -12,6 +12,7 @@
     padding-inline: spacing.$sm;
   }
   @include mixins.media-query(sizes.$desktop-vw) {
+    width: sizes.$desktop;
     padding: 0;
   }
 }
