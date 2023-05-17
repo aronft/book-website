@@ -1,6 +1,8 @@
 @use "@/styles/settings/colors";
 @use "@/styles/settings/typography";
 @use "@/styles/settings/spacing";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .protected {
   padding-block: 200px;
@@ -12,10 +14,13 @@
     max-width: 850px;
     background-color: colors.$grey-concrete;
     text-align: center;
-    padding: 128px 153px;
     display: flex;
+    padding: 60px 40px;
     flex-direction: column;
     row-gap: spacing.$xs;
+    @include mixins.media-query(sizes.$tablet-vw) {
+      padding: 128px 153px;
+    }
   }
 
   &__description {
