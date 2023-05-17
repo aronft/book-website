@@ -1,5 +1,7 @@
 @use "@/styles/settings/colors";
 @use "@/styles/settings/spacing";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .changelog {
   padding-block: 200px;
@@ -9,11 +11,15 @@
 
   &__content {
     background-color: colors.$grey-concrete;
-    padding: spacing.$lg spacing.$xl;
+    padding: spacing.$sm spacing.$xs;
+    row-gap: spacing.$xs;
     display: flex;
     flex-direction: column;
-    row-gap: spacing.$xs;
-    align-items: center;
+
+    @include mixins.media-query(sizes.$tablet-vw) {
+      padding: spacing.$lg spacing.$xl;
+      align-items: center;
+    }
   }
 
   &__version {
