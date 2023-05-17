@@ -44,7 +44,7 @@ export const Footer = () => {
                 <img src={done} alt="" />
                 <img src={done} alt="" />
               </div>
-              <Link href="/services">Services</Link>
+              <Link href="/store">Our Store</Link>
             </div>
             <div className={styles["footer__group"]}>
               <div className={styles["group__icons"]}>

@@ -8,14 +8,11 @@ export const Menu = ({ className }: { className: string }) => {
         <Link href="/" color="white">
           Home
         </Link>
-        <Link href="/pages" color="white">
-          Pages
-        </Link>
         <Link href="/about" color="white">
           About
         </Link>
-        <Link href="/services" color="white">
-          Services
+        <Link href="/pages" color="white">
+          Pages
         </Link>
         <Link href="/contact-us" color="white">
           Contact
