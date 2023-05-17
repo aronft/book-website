@@ -1,6 +1,8 @@
 @use "@/styles/settings/colors";
 @use "@/styles/settings/typography";
 @use "@/styles/settings/spacing";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .store-single {
   padding-block: spacing.$section-inside-space;
@@ -8,7 +10,11 @@
 
 .frequent-questions {
   display: flex;
+  flex-direction: column;
   gap: spacing.$xl;
+  @include mixins.media-query(sizes.$tablet-xs-vw) {
+    flex-direction: row;
+  }
 }
 
 .question {
@@ -25,10 +31,15 @@
 
   &__actions {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: spacing.$lg;
     button {
       text-transform: uppercase;
+    }
+
+    @include mixins.media-query(sizes.$tablet-xs-vw) {
+      flex-direction: row;
     }
   }
 }

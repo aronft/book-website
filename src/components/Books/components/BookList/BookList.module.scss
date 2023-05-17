@@ -1,12 +1,26 @@
 @use "@/styles/settings/spacing";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .books {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   column-gap: spacing.$lg;
   row-gap: 70px;
-  justify-content: space-between;
-  > * {
-    width: calc(100% / 3 - spacing.$lg);
+
+  @include mixins.media-query(sizes.$tablet-xs-vw) {
+    flex-direction: row;
+    justify-content: space-between;
+    > * {
+      width: calc(100% / 2 - spacing.$lg);
+    }
+  }
+
+  @include mixins.media-query(sizes.$tablet-vw) {
+    > * {
+      width: calc(100% / 3 - spacing.$lg);
+    }
   }
 }

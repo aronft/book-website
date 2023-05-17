@@ -1,5 +1,7 @@
 @use "@/styles/settings/colors";
 @use "@/styles/settings/spacing";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .features-section {
   background-color: colors.$bg-secondary;
@@ -10,9 +12,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
   gap: spacing.$xl;
-  > * {
-    width: calc(100% / 3 - spacing.$xl);
+
+  @include mixins.media-query(sizes.$tablet-xs-vw) {
+    flex-direction: row;
+    > * {
+      width: calc(100% / 3 - spacing.$xl);
+    }
   }
 }
 
