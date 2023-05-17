@@ -1,8 +1,14 @@
 @use "@/styles/settings/spacing";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .articles {
   column-gap: spacing.$sm;
   row-gap: spacing.$lg;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  @include mixins.media-query(sizes.$tablet-xs-vw) {
+    grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+  }
 }
