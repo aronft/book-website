@@ -6,8 +6,11 @@
   max-width: 100%;
   width: sizes.$desktop;
   margin-inline: auto;
-  padding-inline: spacing.$sm;
+  padding-inline: spacing.$xs;
 
+  @include mixins.media-query(sizes.$mobile-vw) {
+    padding-inline: spacing.$sm;
+  }
   @include mixins.media-query(sizes.$desktop-vw) {
     padding: 0;
   }
