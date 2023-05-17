@@ -30,7 +30,7 @@ export const FrequentQuestions = () => {
           Frequent Questions?
         </SectionTitle>
         <div className={styles.questions}>
-          <UiList>
+          <UiList space="none">
             {questions.map((question) => (
               <Question
                 id={question.id}

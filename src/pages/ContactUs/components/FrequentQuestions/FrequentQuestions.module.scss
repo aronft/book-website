@@ -1,6 +1,8 @@
 @use "@/styles/settings/colors";
 @use "@/styles/settings/typography";
 @use "@/styles/settings/spacing";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .section {
   padding-block: spacing.$section-inside-space;
@@ -21,8 +23,13 @@
     flex-wrap: wrap;
     column-gap: spacing.$xl;
     row-gap: spacing.$sm;
-  }
-  li {
-    width: calc(100% / 2 - spacing.$xl);
+    flex-direction: column;
+
+    @include mixins.media-query(sizes.$desktop-vw) {
+      flex-direction: row;
+      li {
+        width: calc(100% / 2 - spacing.$xl);
+      }
+    }
   }
 }

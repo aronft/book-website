@@ -1,6 +1,8 @@
 @use "@/styles/settings/spacing";
 @use "@/styles/settings/colors";
 @use "@/styles/settings/typography";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .contact-details {
   padding-block: spacing.$section-inside-space;
@@ -20,7 +22,13 @@
 
 .content {
   display: flex;
-  gap: 100px;
+  flex-direction: column;
+  column-gap: 100px;
+  row-gap: 70px;
+
+  @include mixins.media-query(sizes.$desktop-vw) {
+    flex-direction: row;
+  }
 
   &__left {
     display: flex;
@@ -29,7 +37,9 @@
   }
 
   &__right {
-    min-width: 600px;
+    @include mixins.media-query(sizes.$tablet-vw) {
+      min-width: 600px;
+    }
   }
 }
 

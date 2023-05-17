@@ -1,24 +1,30 @@
 @use "@/styles/settings/spacing";
 @use "@/styles/settings/colors";
+@use "@/styles/tools/mixins";
+@use "@/styles/settings/sizes";
 
 .contact-form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: spacing.$tiny;
+  grid-template-columns: 1fr;
 
-  > *:nth-child(3),
-  > *:nth-child(4),
-  > *:nth-child(5),
-  > *:nth-child(6) {
-    grid-column: 1 / -1;
-  }
+  @include mixins.media-query(sizes.$desktop-vw) {
+    grid-template-columns: repeat(2, 1fr);
 
-  > *:nth-child(4) {
-    margin-bottom: spacing.$tiny;
-  }
+    > *:nth-child(3),
+    > *:nth-child(4),
+    > *:nth-child(5),
+    > *:nth-child(6) {
+      grid-column: 1 / -1;
+    }
 
-  > *:nth-child(5) {
-    margin-bottom: spacing.$xs;
+    > *:nth-child(4) {
+      margin-bottom: spacing.$tiny;
+    }
+
+    > *:nth-child(5) {
+      margin-bottom: spacing.$xs;
+    }
   }
 
   &__agree {
