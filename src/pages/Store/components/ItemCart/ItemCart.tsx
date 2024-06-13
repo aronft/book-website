@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/atoms/Input/Input";
 import { Text } from "@/components/ui/atoms/Text/Text";
 import styles from "./ItemCart.module.scss";
 import { Book } from "@/components/Books/models/Book";
+import { useShoppingStore } from "../../store/shoppingStore";
 
 export interface ItemCartProps {
   book: Book;
@@ -10,7 +11,7 @@ export interface ItemCartProps {
 }
 
 export const ItemCart = ({ book, quantity }: ItemCartProps) => {
-  const removeItem = () => {};
+  const removeItem = useShoppingStore((state) => state.removeItem);
   return (
     <div className={styles["item-cart"]}>
       <img src={book.image} alt={book.title} />
@@ -20,7 +21,7 @@ export const ItemCart = ({ book, quantity }: ItemCartProps) => {
         </Text>
         <Text tag="span">${book.price}USD</Text>
         <div className={styles["item-cart__actions"]}>
-          <Button onClick={removeItem} type="link" colorText="primary" size="auto">
+          <Button onClick={() => removeItem(book)} type="link" colorText="primary" size="auto">
             Remove
           </Button>
         </div>
