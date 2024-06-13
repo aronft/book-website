@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import styles from "./Button.module.scss";
-import * as classNames from "classnames";
+import classNames from "classnames";
 import { Link } from "react-router-dom";
 
 export interface ButtonProps {
