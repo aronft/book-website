@@ -2,7 +2,7 @@ import styles from "./Hero.module.scss";
 import { ReactNode } from "react";
 
 interface HeroProps {
-  tag: string;
+  tag: keyof Pick<JSX.IntrinsicElements, "section" | "div" | "article">;
   children: ReactNode;
 }
 

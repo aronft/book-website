@@ -1,4 +1,5 @@
 import { uuiGenerator } from "@/utils/uuidGenerator";
+import { Question } from "../models/question";
 
 export const QUESTIONS: Question[] = [
   {

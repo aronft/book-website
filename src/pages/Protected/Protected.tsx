@@ -23,7 +23,7 @@ export const Protected = () => {
               This page is password protected. If you are the website admin, or have access to this
               page, please type your password below.
             </p>
-            <Input placeHolder="Enter your password" type="password">
+            <Input placeHolder="Enter your password" type="password" name="password">
               <FiKey />
             </Input>
             <Button color="secondary" size="medium" colorText="primary">

@@ -1,3 +1,4 @@
+import { User } from "@/models/User";
 import { Avatar } from "../../atoms/Avatar/Avatar";
 import { Rating } from "../../atoms/Rating/Rating";
 import styles from "./TestimonialCard.module.scss";

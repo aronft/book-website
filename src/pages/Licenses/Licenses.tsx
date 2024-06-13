@@ -40,7 +40,7 @@ export const Licenses = () => {
             </Heading>
             <p className={styles.licenses__description}>
               Pages template uses free licensed<strong> Google Fonts.</strong> Please check{" "}
-              <strongc>Cardo</strongc> and <strong>Inter</strong>.
+              <strong>Cardo</strong> and <strong>Inter</strong>.
             </p>
           </div>
         </Container>

@@ -123,15 +123,15 @@ export const StyleGuide = () => {
         <section className={styles["style-guide__section-input"]}>
           <Heading level="h2">Input Fields</Heading>
           <form action="" className={styles["form-grid"]}>
-            <Input placeHolder="Name" type="text">
+            <Input placeHolder="Name" type="text" name="name">
               <FiUser />
             </Input>
 
-            <Input placeHolder="Email" type="email">
+            <Input placeHolder="Email" type="email" name="email">
               <HiOutlineMail />
             </Input>
 
-            <Input placeHolder="Phone" type="text">
+            <Input placeHolder="Phone" type="text" name="phone">
               <BsTelephone />
             </Input>
 

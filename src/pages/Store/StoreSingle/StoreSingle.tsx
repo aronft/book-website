@@ -19,7 +19,9 @@ export const StoreSingle = () => {
   const [quantity, setQuantity] = useState(0);
   const { addItem } = useShoppingStore();
   const { onOpen } = useModalStore();
-
+  if (params.id === undefined) {
+    throw new Error("error");
+  }
   const { book, loading, error } = useBooksById(params.id);
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();

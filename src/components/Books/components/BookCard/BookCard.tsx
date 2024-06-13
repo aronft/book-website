@@ -1,3 +1,4 @@
+import React from "react";
 import { Heading, HeadingProps } from "@/components/ui/atoms/Heading/Heading";
 import { BookPortrait, BookPortraitProps } from "../BookPortrait/BookPortrait";
 import { Button } from "@/components/ui/atoms/Button";
@@ -17,7 +18,7 @@ interface BookCardProps
   length: string;
   price: number;
   type: "print" | "digital" | "vinilo";
-  tag: string;
+  tag: keyof Pick<JSX.IntrinsicElements, "a" | "div" | "article" | "section">;
   id: string;
 }
 export const BookCard = ({

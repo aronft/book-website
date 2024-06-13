@@ -12,15 +12,15 @@ import { Checkbox } from "@/components/ui/atoms/Checkbox/Checkbox";
 export const ContactForm = () => {
   return (
     <form className={styles["contact-form"]}>
-      <Input placeHolder="Name" type="text">
+      <Input placeHolder="Name" type="text" name="name">
         <FiUser />
       </Input>
 
-      <Input placeHolder="Email" type="email">
+      <Input placeHolder="Email" type="email" name="email">
         <HiOutlineMail />
       </Input>
 
-      <Input placeHolder="Phone" type="text">
+      <Input placeHolder="Phone" type="text" name="phone">
         <BsTelephone />
       </Input>
 
